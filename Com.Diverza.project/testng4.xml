@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.mkyong.busongratis.TestFacturaBasicaGratis"/>
+      </classes>
+      </test>
+      
+      
+      <test name="BasicaDetail">
+	 <classes>
+	   <class name="com.mkyong.busongratis.TestFacturaBasicaGratisDetail"/>
+	 </classes>
+      </test>
+      
+      <test name="CartaPorte">
+	 <classes>
+	   <class name="com.mkyong.busongratis.TestFacturaCartaPorteGratis"/>
+	 </classes>
+      </test>
+   
+    <test name="CartaPorteComImpuesto">
+	 <classes>
+	   <class name="com.mkyong.busongratis.TestFacturaCartaPorteGratisComImpuesto"/>
+	 </classes>
+      </test>
+   
+   
+  <test name="FacturaBasicaGratuito">
+     <classes>
+       <class name="com.mkyong.busongratis.TestFacturaPagoGratis"/>
+ </classes>
+    </test>
+    
+    <test name="FacturaBasicaGratuitoDetai">
+     <classes>
+       <class name="com.mkyong.busongratis.TestFacturaPagoGratisDetail"/>
+ </classes>
+    </test>
+    
+    
+    <test name="FacturaCartaPorteGratuito">
+     <classes>
+       <class name="com.mkyong.busongratis.TestNotaDeCreditoGratis"/>
+ </classes>
+    </test>
+    
+     <test name="FacturaCartaPorteGratuitoDetail">
+     <classes>
+       <class name="com.mkyong.busongratis.TestNotaDeCreditoGratisDetail"/>
+ </classes>
+    </test>
+    
+    
+</suite> <!-- Suite -->
