@@ -6,6 +6,10 @@ import org.testng.annotations.Test;
 
 import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -28,7 +32,7 @@ public class TestReportesEmitidos2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -55,15 +59,29 @@ public class TestReportesEmitidos2 extends base{
 		Thread.sleep(2000);
 		ld.DescargarEmitido().click();
 		ld.DescargarEmitidoPDF().click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		ld.BottonDescarga().click();
-		//ld.SignOut().click();
-		//ld.CloseBotton().click();
+		Thread.sleep(20000);
+        Robot robot = new Robot();
+        robot.mouseMove(85, 50);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        Thread.sleep(2000);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        Thread.sleep(2000);
+	    ld.SignOut().click();
+        Thread.sleep(2000);
+		ld.CloseBotton().click();
 		
 		}
 	
+	@AfterTest
+    public void closeBrowser() {
+	    driver.close();
 	
-	}
+   }
+	
+	
+}
  
 
 

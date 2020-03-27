@@ -6,6 +6,8 @@ import org.testng.annotations.Test;
 
 import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 
+import junit.framework.Assert;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -35,14 +37,15 @@ public class TestEmailAndPassword extends base{
 		ld.ingPortal().sendKeys("lisandro.fernando");
 		ld.ingPortal1().sendKeys("Diverza2*");
 		ld.ingPortal11().click();
+		org.testng.Assert.assertTrue(true, "Usuario o contraseña incorrecta");
 		
 		
 		}
 	@AfterTest
-	public void closeBrowser() {
-		driver.close();
+	     public void closeBrowser() {
+		      driver.close();
 		
 	}
  
-}
+ }
 

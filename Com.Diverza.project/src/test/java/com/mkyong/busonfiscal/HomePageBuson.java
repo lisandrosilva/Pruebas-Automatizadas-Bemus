@@ -9,6 +9,7 @@ import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -45,7 +46,7 @@ public class HomePageBuson extends base{
 		ld.FolioSeries().click();
 		Thread.sleep(2000);
 		ld.AddFolio().click();
-		ld.SerieFolio().sendKeys("LG");
+		ld.SerieFolio().sendKeys("TDT");
 		ld.ValorInicialFolio().sendKeys("0");
 		Thread.sleep(3000);
 		JavascriptExecutor js =(JavascriptExecutor)driver;
@@ -57,7 +58,7 @@ public class HomePageBuson extends base{
 		Thread.sleep(1000);
 		ld.AddSucursal().click();
 		ld.SucursalBranch().sendKeys("San Nicolas");
-		ld.SucursalAlias().sendKeys("SN");
+		ld.SucursalAlias().sendKeys("Prueba5");
 		ld.SucursalZip().sendKeys("66457");
 		Thread.sleep(1000);
 		ld.ActivarSucursal().click();
@@ -65,30 +66,46 @@ public class HomePageBuson extends base{
 		Thread.sleep(1000);
 		ld.Certificados().click();
 		Thread.sleep(1000);
+		
 		ld.AddCertificado().click();
 		Thread.sleep(2000);
-		ld.SelectSucursalCertificado().sendKeys("Principal");
+		ld.SelectSucursalCertificado().sendKeys("Prueba5");
 		ld.SelectSucursalCertificado().sendKeys(Keys.ENTER);
-		Thread.sleep(4000);
-		String file_input = new String();
-		WebElement uploadElement = driver.findElement(By.id("certificate_cer_file"));
-		((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('form-control')", uploadElement);
-		uploadElement.sendKeys("//Users//lisandrosilva//Desktop//funk671228ph6.cer");
-		WebElement uplodElement = driver.findElement(By.id("certificate_key_file"));
-		((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('form-control')", uploadElement);
-		uploadElement.sendKeys("//Users//lisandrosilva//Desktop//Claveprivada_FIEL_FUNK671228PH6_20190528_164238 copy.key");
-	
+		Thread.sleep(3000);
+		
+		
+	    WebElement element = driver.findElement(By.xpath("//*[@id=\"certificate_cer_file\"]"));
+	    JavascriptExecutor jse = (JavascriptExecutor)driver;
+	    jse.executeScript("arguments[0].click();",element);
+	    Thread.sleep(1000);
+	    ((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('form-control')", element);
+		element.sendKeys("/Users/lisandrosilva/Downloads/Q1NEIEZVTksuemlw/CSD_KARLA_FUENTE_NOLASCO_FUNK671228PH6_20190528_174243s.cer");
+	    Thread.sleep(3000);
+	    
+	    
+	    WebElement Keyelement = driver.findElement(By.xpath("//*[@id=\"certificate_key_file\"]"));
+	    JavascriptExecutor jsi = (JavascriptExecutor)driver;
+	    jsi.executeScript("arguments[0].click();",Keyelement);
+	    Thread.sleep(3000);
+	    
+	   
+	    ((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('form-control')", Keyelement);
+		Keyelement.sendKeys("/Users/lisandrosilva/Downloads/Q1NEIEZVTksuemlw/CSD_KARLA_FUENTE_NOLASCO_FUNK671228PH6_20190528_174243.key");
+	    Thread.sleep(2000);
+	    
+	    
 		ld.AddPassword().sendKeys("12345678a");
-		Thread.sleep(1000);
-		ld.UploadCerificate().click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
+		ld.UploadCertificate().click();
+		Thread.sleep(3000);
 		ld.SignOut().click();
+		Thread.sleep(2000);
 		ld.CloseBotton().click();
 		
 		}
 	@AfterTest
-	public void closeBrowser() {
-		driver.close();
+	     public void closeBrowser() {
+		    driver.close();
 		
 	}
  

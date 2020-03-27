@@ -50,7 +50,7 @@ public class FacturaDetallista extends base{
 	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	    ld.AddArchivoKey().sendKeys("/Applications/Certificados de signas digitales pruebas/CSDs Nuevos(2019)/Personas Fisicas/FIEL_FUNK671228PH6_20190528164238/Claveprivada_FIEL_FUNK671228PH6_20190528_164238.key");
 	    ld.AddPassword().sendKeys("12345678a");
-	    ld.UploadCerificate().click();
+	    //ld.UploadCerificate().click();
 	    ld.SignOut().click();
 	    ld.CloseBotton().click();
 	    

@@ -1,5 +1,6 @@
 package com.mkyong.busonfiscal;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -35,14 +36,15 @@ public class TestEmail extends base{
 		ld.ingPortal().sendKeys("lisandro.fernando");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
+		Assert.assertTrue(true,"Usuario o contraseña incorrecta");
 		
 		
 		}
 	@AfterTest
-	public void closeBrowser() {
-		driver.close();
+	      public void closeBrowser() {
+		       driver.close();
 		
 	}
  
-}
+ }
 

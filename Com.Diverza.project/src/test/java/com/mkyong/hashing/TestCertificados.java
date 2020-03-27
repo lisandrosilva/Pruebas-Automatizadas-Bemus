@@ -47,10 +47,10 @@ public class TestCertificados extends base{
 	    //ld.PrincipalSucursalCert().click();
 	    //ld.SucursalCertif().click();
 	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	    ld.UploadCerificate().click();
+	    //ld.UploadCerificate().click();
 	    ld.AddArchivoCer().sendKeys("//Users//lisandrosilva//Desktop//funk671228ph6.cer");
 	    driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-	    ld.UploadCerificate().click();
+	   // ld.UploadCerificate().click();
 	    ld.AddArchivoKey().sendKeys("//Users//lisandrosilva//Desktop//Claveprivada_FIEL_FUNK671228PH6_20190528_164238 copy.key");
 	    ld.AddPassword().sendKeys("12345678a");
 	    ld.SignOut().click();

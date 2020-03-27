@@ -89,7 +89,7 @@ public class TestFacturaDetallista extends base{
 		
 	}
 	
-	}
+}
  
 
 

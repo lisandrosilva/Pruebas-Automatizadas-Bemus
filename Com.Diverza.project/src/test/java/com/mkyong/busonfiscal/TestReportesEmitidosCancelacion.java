@@ -60,7 +60,7 @@ public class TestReportesEmitidosCancelacion extends base{
 	    ld.IdentificarStatusCancelacion().click();
 	    Thread.sleep(4000);
 	    ld.SolicitarCancelacion().click();
-	    Thread.sleep(1000);
+	    Thread.sleep(3000);
 	    ld.AceptarCancelacion().click();
 	    Thread.sleep(4000);
 		ld.SignOut().click();

@@ -71,6 +71,7 @@ public class TestFacturaBasica extends base{
 	    Thread.sleep(1000);
 	    s.MethodPago1Exhibicion().click();
 	    Thread.sleep(2000);
+	    for(int i=0; i<=3; i++) {
 		s.AgregarConsept().click();
 		s.ClaveDelProducto().sendKeys("10215612");
 		s.CantidadConsept().sendKeys("4");
@@ -78,6 +79,7 @@ public class TestFacturaBasica extends base{
 		s.DescripticionConsept().sendKeys("Factura Electronica");
 		s.ValorUnitarioConsept().sendKeys("60");
 		s.AddConsept().click();
+	    }
 		Thread.sleep(2000);
 		s.EmitirFactura().click();
 		Thread.sleep(5000);

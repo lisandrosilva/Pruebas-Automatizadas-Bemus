@@ -75,7 +75,7 @@ public class TestFacturaPago extends base{
 		
 	}
 	
-	}
+}
  
 
 

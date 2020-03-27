@@ -20,7 +20,8 @@ public class base {
 	
 	{
 	    prop = new Properties();
-		FileInputStream file = new FileInputStream("/Users/lisandrosilva/Com.Diverza.project/src/main/java/resources/data.properties");
+	    //FileInputStream System.getProperty("user.dir")
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/src/main/java/resources/data.properties");
 		prop.load(file);
 		String browserName = prop.getProperty("browser");
 		
