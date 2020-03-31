@@ -16,14 +16,11 @@ import org.openqa.selenium.interactions.internal.MouseAction.Button;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import pageObjects.CommonPage;
 import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
-import pageObjects.busonfiscal.CommonInfo;
-import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestNotariosPublicos extends base{
+public class TestComercioExterior2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -47,70 +44,77 @@ public class TestNotariosPublicos extends base{
 		ld.ingFactura().click();
 		Thread.sleep(1000);
 		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaNotarioPublico().click();
+		fact.FacturaComercioExterior().click();
 		Thread.sleep(1000);
 		SearchPage ps = new SearchPage(driver);
 		ps.BasicaSelectFiscal().sendKeys("612");
 		ps.BasicaSelectFiscal().sendKeys(Keys.ENTER);
-		ps.RFC().sendKeys("XAXX010101000");
-		ps.SelectCFDI().sendKeys("G03");
-        ps.SelectCFDI().sendKeys(Keys.ENTER);	
+		ps.RFC().sendKeys("FUNK671228PH6");
+		Thread.sleep(1000);
+		ps.CFDIComercioExt().click();
+		Thread.sleep(1000);
+		ps.AdquiDeMercCFDI().click();	
         ps.formaPago().sendKeys("1");
         ps.SelectformaPago1().sendKeys("01");
         ps.SelectformaPago1().sendKeys(Keys.ENTER);
         ps.SelectMethodPago().click();
         Thread.sleep(1000);
         ps.MethodPago1Exhibicion().click();
+        for(int i=0; i<3; i++) {
         ps.AgregarConsept().click();
-        ps.ClaveDelProducto().sendKeys("10215612");
+        ps.ClaveDelProducto().sendKeys("60121001");
+        ps.NumIDComercioExt().sendKeys("999999");
         ps.CantidadConsept().sendKeys("80");
-        ps.ClaveDeUnidad().sendKeys("H87");
-        ps.DescripticionConsept().sendKeys("Factura");
-        ps.ValorUnitarioConsept().sendKeys("75");
+        ps.ClaveDeUnidad().sendKeys("KGM");
+        ps.DescripticionConsept().sendKeys("Reparacion De Lavadora");
+        ps.ValorUnitarioConsept().sendKeys("1230.00");
         ps.AddConsept().click();
-        ps.NumeroInstNotarial().sendKeys("99999");
-        ps.DateNotarial().sendKeys("20-08-2018");
-        ps.MontoInstNotarial().sendKeys("8000");
-        ps.IvaInstNotarial().sendKeys("80");
-        ps.SubTotalInstNotarial().sendKeys("4800");
-        ps.CurpInstNotarial().sendKeys("PACG810404HYNTHR04");
-        ps.NumeroDelNotario().sendKeys("999");
-        ps.EntidadNotarial().sendKeys("01");
-        ps.EntidadNotarial().sendKeys(Keys.ENTER);
-        ps.IMUEBLENotarial().sendKeys("01");
-        ps.IMUEBLENotarial().sendKeys(Keys.ENTER);
-        ps.CalleNotarial().sendKeys("Barragan");
-        ps.MunicipioNotarial().sendKeys("San Nicolas");
-        ps.EstadoNotarial().sendKeys("19");
-        ps.EstadoNotarial().sendKeys(Keys.ENTER);
-        Thread.sleep(3000);
-        ps.PaisNotarial().sendKeys("MEX");
-        ps.PaisNotarial().sendKeys(Keys.ENTER);
-        ps.CodigoPostalNotarial().sendKeys("66457");
-        ps.NombreNotarial().sendKeys("Zeferino");
-        ps.ApellidoPaternoNotarial().sendKeys("Tiburcio");
-        ps.RFCNotarial().sendKeys("AAA010101AAA");
-        ps.CurpEnajNotarial().sendKeys("PACG810404HYNTHR04");
-        ps.NombreAdquiNotarial().sendKeys("Miguel Delgado");
-        ps.RFCAdquiNotarial().sendKeys("AAA010101AAA");
+        }
+        ps.OperaComerExt().click();
+        Thread.sleep(1000);
+        ps.ExportOperation().click();
+        ps.ClaveDePedimentoComerc().click();
+        Thread.sleep(1000);
+        ps.ImportDefPedimentoComer().click();
+        ps.CertifOrigExport().click();
+        Thread.sleep(1000);
+        ps.NonCertiExpo().click();
+        Thread.sleep(2000);
+        ps.ClaveIncoTermExport().sendKeys("CFR");
+        ps.ClaveIncoTermExport().sendKeys(Keys.ENTER);
+        ps.SubdivisionFacturaExp().click();
+        Thread.sleep(1000);
         
+        ps.NonSubdFactExport().click();
+        ps.EquiValentExport().sendKeys("20000");
+        Thread.sleep(2000);
+        
+        ps.AgregarMercancia().click();
+        ps.MercanciaIDNumb().sendKeys("999999");
+        ps.CurrencyMercancia().sendKeys("1000");
+        ps.MercanciaIDNumb().sendKeys(Keys.ENTER);
+        ps.MercanciaDescript().sendKeys("AUDI");
+        ps.AddDescriptMercancia().click();
+       
+        ps.AddMercancia().click();
         
         ps.EmitirFactura().click();
-        Thread.sleep(6000);
+        Thread.sleep(5000);
         ld.SignOut().click();
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         ld.CloseBotton().click();
+        
 		
 		
 		
 	    }
 	@AfterTest
-	public void closeBrowser() {
-		driver.close();
+	     public void closeBrowser() {
+		        driver.close();
 		
 	}
 	
-	}
+}
  
 
 

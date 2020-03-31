@@ -19,11 +19,10 @@ import org.testng.annotations.Test;
 import pageObjects.CommonPage;
 import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
-import pageObjects.busonfiscal.CommonInfo;
 import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestTuristaPasajeroExtranjeroDetail extends base{
+public class TestInstituicionesEducativasDetail2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -46,8 +45,8 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		Thread.sleep(2000);
 		ld.ingFactura().click();
 		Thread.sleep(1000);
-		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaTuristaPassagero().click();
+		FacturaPage pg = new FacturaPage(driver);
+		pg.FacturaInstituiciones().click();
 		Thread.sleep(1000);
 		SearchPage ps = new SearchPage(driver);
 		ps.BasicaSelectFiscal().sendKeys("612");
@@ -62,80 +61,57 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
         Thread.sleep(1000);
         ps.MethodPago1Exhibicion().click();
         CommonLocal l = new CommonLocal(driver);
-        CommonPage c = new CommonPage(driver);
-        CommonInfo n = new CommonInfo(driver);
-        
+        Thread.sleep(2000);
+        for(int i=0; i<3; i++) {
         ps.AgregarConsept().click();
         ps.ClaveDelProducto().sendKeys("10215612");
         ps.CantidadConsept().sendKeys("80");
         ps.ClaveDeUnidad().sendKeys("H87");
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
-   
-        n.ButtonRetenidoVs().click();
-        l.SelectLocalTaxes().click();
+        
+        l.AddStudentName().sendKeys("Braulio");
+        l.CurpStudent().sendKeys("PACG810404HYNTHR04");
+        Thread.sleep(1000);
+        l.SelectEducationLevel().click();
+        Thread.sleep(1000);
+        l.BatchelorsOEquiv().click();
+        l.RVOEAluno().sendKeys("1234");
+        l.AgregarComplInstEdu().click();
+        l.ButtonLocalRetention().click();
+		l.SelectLocalTaxes().click();
 		l.IVALocalTaxes().click();
 		Thread.sleep(1000);
 		l.SelectFactorTaxes().click();
 		l.TasaF().click();
-		l.CuotaOtasaLocal().sendKeys("0.8");
-        n.AddRetendidoG().click();
-        Thread.sleep(1000);
-        n.ButtonTransVs().click();
-        l.SelectLocalTransf().click();
+		l.CuotaOtasaLocal().sendKeys("0.80000");
+		l.RetenidoAsist().click();
+		Thread.sleep(1000);
+		l.ButtonTranLocal().click();
+		l.SelectLocalTransf().click();
 		Thread.sleep(1000);
 		l.IvaTransfer().click();
 		Thread.sleep(1000);
 		l.SelectTransfertype().click();
 		Thread.sleep(1000);
 		l.TasaTransf().click();
-		l.TasaCuotaTransf().sendKeys("0.8");
-        n.AddTransladoG().click();
-        Thread.sleep(1000);
-        n.ButtonNumeroPediVs().click();
-        l.ValidYearLocalPed().sendKeys("18");
-		l.AduanaDespLocalPed().sendKeys("24");
-		l.PatentNumLocalPed().sendKeys("1487");
-		l.YearPlusProgr().sendKeys("8015991");
-        n.AddNumeroPedG().click();
-        Thread.sleep(1000);
-        n.ButtonDatsPartsCompVs().click();
-        l.ClaveProdLocal().sendKeys("10101512");
-		l.CantidadLocal().sendKeys("446817");
-		l.DescriptLocal().sendKeys("Conejos");
-        l.AgregarParteAsist().click();
-        Thread.sleep(1000);
-        n.ButtonPartsAduaneraVs().click();
-        l.AnoValidAduanera().sendKeys("18");
-		l.AduanaDespacho().sendKeys("24");
-		l.NumeroPatente().sendKeys("1487");
-		l.AnoNumProg().sendKeys("8016004");
-		
-        Thread.sleep(1000);
-        n.ButtonInfoAdcVs().click();
-        l.DescriptOtroIdioma().sendKeys("Inglish");
-		l.AdicRefByConsept().sendKeys("abcdg");
-		l.AgregarInfoAduanaAsist().click();
-        Thread.sleep(1000);
-        n.ButtonDatosPersonVs().click();
-        l.ExtraAtribDatoPers().sendKeys("Cantidad");
+		l.TasaCuotaTransf().sendKeys("0.80000");
+		l.AgregarTransAsist().click();
+		Thread.sleep(1000);
+		l.ButtonInfAdLocal().click();
+		l.DescriptOtroIdioma().sendKeys("Inglish");
+		l.AdicRefByConsept().sendKeys("12345");
+		Thread.sleep(1000);
+		l.ButtonDatosPerson().click();
+		l.ExtraAtribDatoPers().sendKeys("Cantidad");
 		l.ValorExtraDatoPers().sendKeys("999999");
 		l.AgregarDatosPersAsist().click();
-        ps.AddConsept().click();
-        
-        ps.TipoDeTransito().sendKeys("Arribo");
-        ps.TipoDeTransito().sendKeys(Keys.ENTER);
-        ps.DateTransit().sendKeys("20-07-2019");
         Thread.sleep(1000);
-        ps.ViaDeTransito().sendKeys("M");
-        ps.ViaDeTransito().sendKeys(Keys.ENTER);
-        ps.TransportIdentication().sendKeys("H123456");
-        ps.TransportIdentificationNumber().sendKeys("CA4");
-        ps.PassenegerNacionality().sendKeys("Mexican");
-        ps.TransportCompany().sendKeys("AeroMexico");
-        Thread.sleep(3000);
-        n.ButtonInfoAdendaVs().click();
-        c.DatosGeneralesAdenda().click();
+        ps.AddConsept().click();
+        }
+        CommonPage c = new CommonPage(driver);
+        c.ButtonAdendaDiverza().click();
+		c.DatosGeneralesAdenda().click();
 		c.ImportLetraGeneral().sendKeys("abcde");
 		c.NumeroDeOrdenGeneral().sendKeys("12345");
 		c.ObservacionesGeneral().sendKeys("LookingGood");
@@ -175,14 +151,6 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		c.ValorDelDato().sendKeys("60");
 		Thread.sleep(1000);
 		c.AddDatosExtras().click();
-		n.ButtonCompRelaVs().click();
-		Thread.sleep(1000);
-		c.SelectTipoDRelacionado().sendKeys("02");
-		c.SelectTipoDRelacionado().sendKeys(Keys.ENTER);
-		c.AgregarRelacionado().click();
-		c.FolioFiscalRelacionado().sendKeys("560a8451-a29c-41d4-a716-544676554400");
-		c.AddRelacionado().click();
-
         ps.EmitirFactura().click();
         Thread.sleep(6000);
         ld.SignOut().click();

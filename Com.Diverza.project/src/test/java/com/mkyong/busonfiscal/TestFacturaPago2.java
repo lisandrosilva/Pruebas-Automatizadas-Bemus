@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -21,7 +20,7 @@ import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
 import resources.base;
 
-public class TestNotaDeCreditoBorrador extends base{
+public class TestFacturaPago2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -42,38 +41,43 @@ public class TestNotaDeCreditoBorrador extends base{
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
-		ld.ingNotadeCredito().click();
+		ld.ingPagos().click();
 		SearchPage s = new SearchPage(driver);
 		s.BasicaSelectFiscal().sendKeys("612");
 		s.BasicaSelectFiscal().sendKeys(Keys.ENTER);
-		s.RFC().sendKeys("FUNK671228PH6");
-		s.SelectCFDI().sendKeys("G03");
-		s.SelectCFDI().sendKeys(Keys.ENTER);
-		s.formaPago().sendKeys("1");
-		Thread.sleep(1000);
-		s.SelectformaPago1().sendKeys("01");
-		s.SelectformaPago1().sendKeys(Keys.ENTER);
-		ld.SaveDraft().click();
-	    Thread.sleep(2000);
-	    ld.DraftBox().sendKeys("Factura Por Terminar");
-	    Thread.sleep(2000);
-	    ld.SaveText().click();
-	    Thread.sleep(3000);
-	    ld.OkButton().click();
-	    Thread.sleep(3000);
-	    ld.Borradores().click();
-	    Thread.sleep(3000);
+		s.RFC().sendKeys("AAA010101AAA");
+		for(int i=0; i<3; i++) {
+		s.AgregarCompPago().click();
+		s.FechaDePago().sendKeys("27-01-2020");
+		s.FormaPagoP().sendKeys("01");
+		s.FormaPagoP().sendKeys(Keys.ENTER);
+		//s.TipoDeCambioPago().sendKeys("1");
+		s.MontoDePago().sendKeys("100");
+		Thread.sleep(3000);
+		s.TaggleSwitchPago().click();
+		s.DocRelacPago().sendKeys("234546d0-5a38-4431-8edb-0f331c10a6d5");
+		//s.CambioPago().sendKeys("1");
+		s.MethodPagoPago().click();
+		s.PPDPago().click();
+		s.ImpSaldoAntePago().sendKeys("100");
+		s.ImportePago().sendKeys("100");
+		s.ImporteSaldoInsolutPago().sendKeys("1");
+		s.AddPagoComplement().click();
+		}
+		s.EmitirFactura().click();
 		Thread.sleep(5000);
 		ld.SignOut().click();
-		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		ld.CloseBotton().click();
-		}
+		
+	    }
 	@AfterTest
-	public void closeBrowser() {
-		driver.close();
-	
+	    public void closeBrowser() {
+		    driver.close();
+		
 	}
-}
+	
+ }
  
 
 

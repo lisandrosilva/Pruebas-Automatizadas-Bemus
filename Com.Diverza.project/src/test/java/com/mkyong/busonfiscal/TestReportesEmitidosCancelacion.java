@@ -64,9 +64,10 @@ public class TestReportesEmitidosCancelacion extends base{
 	    ld.AceptarCancelacion().click();
 	    Thread.sleep(4000);
 		ld.SignOut().click();
+		Thread.sleep(2000);
 		ld.CloseBotton().click();
-		
 		}
+	
 	@AfterTest
 		public void closeBrowser() {
 			driver.close();

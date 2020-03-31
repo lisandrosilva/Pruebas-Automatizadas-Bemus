@@ -68,8 +68,8 @@ public class TestReportesEmitidos1 extends base{
         Thread.sleep(2000);
 		ld.SignOut().click();
 		ld.CloseBotton().click();
-		
 		}
+	
 	@AfterTest
     public void closeBrowser() {
 	    driver.close();

@@ -75,8 +75,6 @@ public class TestServiciosParcealesDeContruccion extends base{
         ps.CodigoPostalConstr().sendKeys("66457");
         ps.AddContruccion().click();
         Thread.sleep(3000);
-       
-     
         ps.EmitirFactura().click();
         Thread.sleep(6000);
         ld.SignOut().click();

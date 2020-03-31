@@ -48,11 +48,7 @@ public class TestFacturaAdendaMultiAssistenciaDetail extends base{
 		fp.Facturabasica().click();
 		Thread.sleep(2000);
 	    SearchPage s = new SearchPage(driver);
-	    
-	    
-	    
 	    Thread.sleep(1000);
-	    
 	    s.BasicaSelectFiscal().sendKeys("612");
 	    Thread.sleep(2000);
 	    s.BasicaSelectFiscal().sendKeys(Keys.ENTER);
@@ -72,6 +68,9 @@ public class TestFacturaAdendaMultiAssistenciaDetail extends base{
 	    Thread.sleep(1000);
 	    s.MethodPago1Exhibicion().click();
 	    Thread.sleep(2000);
+	    CommonPage c = new CommonPage(driver);
+	    Thread.sleep(2000);
+	    
 		s.AgregarConsept().click();
 		s.ClaveDelProducto().sendKeys("10215612");
 		s.CantidadConsept().sendKeys("4");
@@ -79,7 +78,6 @@ public class TestFacturaAdendaMultiAssistenciaDetail extends base{
 		s.DescripticionConsept().sendKeys("Factura Electronica");
 		s.ValorUnitarioConsept().sendKeys("60");
 		Thread.sleep(2000);
-		CommonPage c = new CommonPage(driver);
 		c.BottonImpuestosRet().click();
 		Thread.sleep(1000);
 		c.ImpuestRetenido().click();
@@ -136,6 +134,7 @@ public class TestFacturaAdendaMultiAssistenciaDetail extends base{
 		c.ExtraValorDato().sendKeys("31-Diciembre-2019");
 		Thread.sleep(1000);
 		s.AddConsept().click();
+	   
 		Thread.sleep(1000);
 		CommonLocal n = new CommonLocal(driver);
 		n.ClaveDelProvMultiAsist().sendKeys("102015");
@@ -164,7 +163,7 @@ public class TestFacturaAdendaMultiAssistenciaDetail extends base{
 	
 	}
 	
-	}
+}
  
 
 

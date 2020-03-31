@@ -23,7 +23,7 @@ import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
-public class TestNotaDeCreditoDetail extends base{
+public class TestNotaDeCreditoDetail2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -59,6 +59,9 @@ public class TestNotaDeCreditoDetail extends base{
 		s.SelectMethodPago().click();
 		Thread.sleep(1000);
 		s.MethodPago1Exhibicion().click();
+		CommonInfo n = new CommonInfo(driver);
+		CommonPage c = new CommonPage(driver);
+		for(int i=0; i<3; i++) {
 		s.AgregarConsept().click();
 		s.ClaveDelProducto().sendKeys("10215612");
 		s.CantidadConsept().sendKeys("12");
@@ -66,8 +69,7 @@ public class TestNotaDeCreditoDetail extends base{
 		s.DescripticionConsept().sendKeys("Factura");
 		s.ValorUnitarioConsept().sendKeys("80");
 		Thread.sleep(1000);
-		CommonInfo n = new CommonInfo(driver);
-		CommonPage c = new CommonPage(driver);
+
 		n.ButtonRetNotaDeCredito().click();
 		c.ImpuestRetenido().click();
 		Thread.sleep(1000);
@@ -124,6 +126,7 @@ public class TestNotaDeCreditoDetail extends base{
 		c.ExtraValorDato().sendKeys("31-Diciembre-2019");
 		n.AgregarDatosPersAsist().click();
 		s.AddConsept().click();
+		}
 		Thread.sleep(1000);
 		n.ButtonInfAdendaNotaDeCrdito().click();
 		c.DatosGeneralesAdenda().click();

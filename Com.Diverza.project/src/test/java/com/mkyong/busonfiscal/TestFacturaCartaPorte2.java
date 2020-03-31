@@ -20,9 +20,10 @@ import pageObjects.CommonPage;
 import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonInfo;
+import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestPersonasFisicasIntegranteDeCoordinacion extends base{
+public class TestFacturaCartaPorte2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -43,47 +44,41 @@ public class TestPersonasFisicasIntegranteDeCoordinacion extends base{
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
-		ld.ingFactura().click();
-		Thread.sleep(1000);
-		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaPersonasFisicas().click();
-		Thread.sleep(1000);
-		SearchPage ps = new SearchPage(driver);
-		ps.BasicaSelectFiscal().sendKeys("612");
-		ps.BasicaSelectFiscal().sendKeys(Keys.ENTER);
-		ps.RFC().sendKeys("FUNK671228PH6");
-		ps.SelectCFDI().sendKeys("G03");
-        ps.SelectCFDI().sendKeys(Keys.ENTER);	
-        ps.formaPago().sendKeys("1");
-        ps.SelectformaPago1().sendKeys("01");
-        ps.SelectformaPago1().sendKeys(Keys.ENTER);
-        ps.SelectMethodPago().click();
-        Thread.sleep(1000);
-        ps.MethodPago1Exhibicion().click();
-        ps.AgregarConsept().click();
-        ps.ClaveDelProducto().sendKeys("10215612");
-        ps.CantidadConsept().sendKeys("80");
-        ps.ClaveDeUnidad().sendKeys("H87");
-        ps.DescripticionConsept().sendKeys("Factura");
-        ps.ValorUnitarioConsept().sendKeys("75");
-        
-		ps.AddConsept().click();
-		ps.ClavePersonasFisicas().sendKeys("abcdef");
-		ps.PlacaPersonasFisicas().sendKeys("12345adc");
-        
-        ps.EmitirFactura().click();
-		Thread.sleep(6000);
+		ld.ingCartaPorte().click();
+		SearchPage s = new SearchPage(driver);
+		s.CartaPorteBasica().click();
+		s.BasicaSelectFiscal().sendKeys("612");
+		s.BasicaSelectFiscal().sendKeys(Keys.ENTER);
+		s.RFC().sendKeys("FUNK671228PH6");
+		s.SelectCFDI().sendKeys("G03");
+		s.SelectCFDI().sendKeys(Keys.ENTER);
+		s.formaPago().sendKeys("1");
+		s.SelectformaPago1().sendKeys("01");
+		s.SelectformaPago1().sendKeys(Keys.ENTER);
+		for(int i=0; i<=3; i++) {
+		s.AgregarConsept().click();
+	    s.ClaveDelProducto().sendKeys("10215612");
+	    s.CantidadConsept().sendKeys("80");
+	    s.ClaveDeUnidad().sendKeys("H87");
+	    s.DescripticionConsept().sendKeys("Factura");
+	    s.ValorUnitarioConsept().sendKeys("75");
+	      
+	    s.AddConsept().click();
+		}
+	    Thread.sleep(2000);
+	        
+	       
+		s.EmitirFactura().click();
+		Thread.sleep(5000);
 		ld.SignOut().click();
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		ld.CloseBotton().click();
-		
-	    }
+		}
 	@AfterTest
 	public void closeBrowser() {
 		driver.close();
-		
-	}
 	
+	}
 }
  
 

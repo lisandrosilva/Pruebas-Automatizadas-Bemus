@@ -1,4 +1,4 @@
-package com.mkyong.busonfiscal;
+package com.mkyong.busonfiscal.detail;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -22,7 +22,7 @@ import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestFacturaAdendaMultiAssistenciaBorrador extends base{
+public class TestFacturaAdendaMultiAssistenciaDetail2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -48,11 +48,7 @@ public class TestFacturaAdendaMultiAssistenciaBorrador extends base{
 		fp.Facturabasica().click();
 		Thread.sleep(2000);
 	    SearchPage s = new SearchPage(driver);
-	    
-	    
-	    
 	    Thread.sleep(1000);
-	    
 	    s.BasicaSelectFiscal().sendKeys("612");
 	    Thread.sleep(2000);
 	    s.BasicaSelectFiscal().sendKeys(Keys.ENTER);
@@ -72,6 +68,9 @@ public class TestFacturaAdendaMultiAssistenciaBorrador extends base{
 	    Thread.sleep(1000);
 	    s.MethodPago1Exhibicion().click();
 	    Thread.sleep(2000);
+	    CommonPage c = new CommonPage(driver);
+	    Thread.sleep(2000);
+	    for(int i=0; i<3; i++) {
 		s.AgregarConsept().click();
 		s.ClaveDelProducto().sendKeys("10215612");
 		s.CantidadConsept().sendKeys("4");
@@ -79,8 +78,64 @@ public class TestFacturaAdendaMultiAssistenciaBorrador extends base{
 		s.DescripticionConsept().sendKeys("Factura Electronica");
 		s.ValorUnitarioConsept().sendKeys("60");
 		Thread.sleep(2000);
+		c.BottonImpuestosRet().click();
+		Thread.sleep(1000);
+		c.ImpuestRetenido().click();
+		Thread.sleep(1000);
+		c.IVARetenido().click();
+		Thread.sleep(1000);
+		c.FactorRetenido().click();
+		Thread.sleep(1000);
+		c.TasaRetenido().click();
+		Thread.sleep(1000);
+		c.TasaOcutaRetenido().clear();
+		c.TasaOcutaRetenido().sendKeys("16.0000");
+		c.AddRetention().click();
+		Thread.sleep(1000);
+		c.ButtonImpTranslados().click();
+		Thread.sleep(1000);
+		c.TaxTranslado().click();
+		Thread.sleep(1000);
+		c.IVATranslado().click();
+		Thread.sleep(1000);
+		c.TypeFactorTranslado().click();
+		Thread.sleep(1000);
+		c.TasaTranslado().click();
+		Thread.sleep(1000);
+		c.TasaOcuTaTranslado().clear();
+		c.TasaOcuTaTranslado().sendKeys("16.0000");
+		c.AddTranslado().click();
+		Thread.sleep(1000);
+		c.ButtonPedimento().click();
+		Thread.sleep(1000);
+		c.AnoValidacionPedimento().sendKeys("18");
+		c.AduanaPedimento().sendKeys("24");
+		c.PatentePedimento().sendKeys("1487");
+		c.ProgressionPedimento().sendKeys("8022338");
+		c.Addpedimento().click();
+		Thread.sleep(1000);
+		c.ButtonDatosDPartesOComp().click();
+		c.ClaveDelProductCompr().sendKeys("10101507");
+		c.CantidadComponente().sendKeys("999999");
+		c.DescriptComponente().sendKeys("Ovejas");
+		Thread.sleep(2000);
+		c.ButtonPartesAduaneras().click();
+		c.AnoAduanera().sendKeys("18");
+		c.AduanaDespacho().sendKeys("24");
+		c.NumeroAduanaPatente().sendKeys("1487");
+		c.AnoProgressAduana().sendKeys("8015956");
+		Thread.sleep(1000);
+		c.ButtonAdicionalInfo().click();
+		c.DescriptInformacion().sendKeys("Great");
+		c.RefAdicInfo().sendKeys("abcdef");
+		Thread.sleep(1000);
+		c.ButtonDatosPersonalizados().click();
+		c.ExtraDatoNombre().sendKeys("Caducidad");
+		c.ExtraValorDato().sendKeys("31-Diciembre-2019");
+		Thread.sleep(1000);
 		s.AddConsept().click();
-		Thread.sleep(3000);
+	    }
+		Thread.sleep(1000);
 		CommonLocal n = new CommonLocal(driver);
 		n.ClaveDelProvMultiAsist().sendKeys("102015");
 		n.OrdenDePagoMultAsist().sendKeys("123456");
@@ -88,28 +143,27 @@ public class TestFacturaAdendaMultiAssistenciaBorrador extends base{
 		n.PaseMedicoMultiAsist().sendKeys("1234567891");
 		n.CostoMultiAsist().sendKeys("0.08");
 		n.IvaMultiAsist().sendKeys("0.08");
+		c.ButtonComprRelacionado().click();
+		Thread.sleep(1000);
+		c.SelectTipoDRelacionado().sendKeys("02");
+		c.SelectTipoDRelacionado().sendKeys(Keys.ENTER);
+		c.AgregarRelacionado().click();
+		c.FolioFiscalRelacionado().sendKeys("560a8451-a29c-41d4-a716-544676554400");
+		c.AddRelacionado().click();
 		Thread.sleep(2000);
-		ld.SaveDraft().click();
-	    Thread.sleep(2000);
-	    ld.DraftBox().sendKeys("Factura Por Terminar");
-	    Thread.sleep(2000);
-	    ld.SaveText().click();
-	    Thread.sleep(3000);
-	    ld.OkButton().click();
-	    Thread.sleep(3000);
-	    ld.Borradores().click();
+		s.EmitirFactura().click();
 		Thread.sleep(6000);
 		ld.SignOut().click();
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		ld.CloseBotton().click();
 		}
 	@AfterTest
-	   public void closeBrowser() {
-		  driver.close();
+	public void closeBrowser() {
+		driver.close();
 	
 	}
 	
- }
+}
  
 
 

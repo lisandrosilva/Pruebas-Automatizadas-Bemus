@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -23,7 +22,7 @@ import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
-public class TestNotaDeCreditoDetail extends base{
+public class TestPersonasFisicasIntegranteDeCoordinacionDetail2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -44,33 +43,35 @@ public class TestNotaDeCreditoDetail extends base{
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
-		ld.ingNotadeCredito().click();
-		SearchPage s = new SearchPage(driver);
-		s.BasicaSelectFiscal().sendKeys("612");
-		s.BasicaSelectFiscal().sendKeys(Keys.ENTER);
-		s.RFC().sendKeys("FUNK671228PH6");
-		s.SelectCFDI().sendKeys("G03");
-		s.SelectCFDI().sendKeys(Keys.ENTER);
-		s.formaPago().sendKeys("1");
+		ld.ingFactura().click();
 		Thread.sleep(1000);
-		s.SelectformaPago1().sendKeys("01");
-		s.SelectformaPago1().sendKeys(Keys.ENTER);
+		FacturaPage fact = new FacturaPage(driver);
+		fact.FacturaPersonasFisicas().click();
 		Thread.sleep(1000);
-		s.SelectMethodPago().click();
-		Thread.sleep(1000);
-		s.MethodPago1Exhibicion().click();
-		s.AgregarConsept().click();
-		s.ClaveDelProducto().sendKeys("10215612");
-		s.CantidadConsept().sendKeys("12");
-		s.ClaveDeUnidad().sendKeys("H87");
-		s.DescripticionConsept().sendKeys("Factura");
-		s.ValorUnitarioConsept().sendKeys("80");
-		Thread.sleep(1000);
-		CommonInfo n = new CommonInfo(driver);
-		CommonPage c = new CommonPage(driver);
-		n.ButtonRetNotaDeCredito().click();
-		c.ImpuestRetenido().click();
-		Thread.sleep(1000);
+		SearchPage ps = new SearchPage(driver);
+		ps.BasicaSelectFiscal().sendKeys("612");
+		ps.BasicaSelectFiscal().sendKeys(Keys.ENTER);
+		ps.RFC().sendKeys("FUNK671228PH6");
+		ps.SelectCFDI().sendKeys("G03");
+        ps.SelectCFDI().sendKeys(Keys.ENTER);	
+        ps.formaPago().sendKeys("1");
+        ps.SelectformaPago1().sendKeys("01");
+        ps.SelectformaPago1().sendKeys(Keys.ENTER);
+        ps.SelectMethodPago().click();
+        Thread.sleep(1000);
+        ps.MethodPago1Exhibicion().click();
+        CommonInfo n = new CommonInfo(driver);
+        CommonPage c = new CommonPage(driver);
+        for(int i=0; i<3; i++) {
+        ps.AgregarConsept().click();
+        ps.ClaveDelProducto().sendKeys("10215612");
+        ps.CantidadConsept().sendKeys("80");
+        ps.ClaveDeUnidad().sendKeys("H87");
+        ps.DescripticionConsept().sendKeys("Factura");
+        ps.ValorUnitarioConsept().sendKeys("75");
+
+        n.ButtonRetePersonas().click();
+        c.ImpuestRetenido().click();
 		c.IVARetenido().click();
 		Thread.sleep(1000);
 		c.FactorRetenido().click();
@@ -78,11 +79,10 @@ public class TestNotaDeCreditoDetail extends base{
 		c.TasaRetenido().click();
 		Thread.sleep(1000);
 		c.TasaOcutaRetenido().clear();
-		c.TasaOcutaRetenido().sendKeys("0.160000");
-		n.RetenidoAsist().click();
-		Thread.sleep(1000);
-		n.ButtonTransNotaDeCredito().click();
-		c.TaxTranslado().click();
+		c.TasaOcutaRetenido().sendKeys("16.0000");
+        Thread.sleep(1000);
+        n.ButtonTransPersonas().click();
+        c.TaxTranslado().click();
 		Thread.sleep(1000);
 		c.IVATranslado().click();
 		Thread.sleep(1000);
@@ -91,42 +91,40 @@ public class TestNotaDeCreditoDetail extends base{
 		c.TasaTranslado().click();
 		Thread.sleep(1000);
 		c.TasaOcuTaTranslado().clear();
-		c.TasaOcuTaTranslado().sendKeys("0.160000");
-		n.AgregarTransAsist().click();
-		Thread.sleep(1000);
-		n.ButtonNumPediNotaDeCredito().click();
-		c.AnoValidacionPedimento().sendKeys("18");
+		c.TasaOcuTaTranslado().sendKeys("16.0000");
+        Thread.sleep(1000);
+        n.ButtonNumePedPersonas().click();
+        c.AnoValidacionPedimento().sendKeys("18");
 		c.AduanaPedimento().sendKeys("24");
 		c.PatentePedimento().sendKeys("1487");
 		c.ProgressionPedimento().sendKeys("8022338");
-		n.AgregarPedAsist().click();
-		Thread.sleep(1000);
-		n.ButtonDatosPartsOCompNotaDeCredito().click();
-		c.ClaveDelProductCompr().sendKeys("10101507");
+        Thread.sleep(1000);
+        n.ButtonDatsDePartesOcompPersonas().click();
+        c.ClaveDelProductCompr().sendKeys("10101507");
 		c.CantidadComponente().sendKeys("999999");
 		c.DescriptComponente().sendKeys("Ovejas");
-		
-		Thread.sleep(1000);
-		n.ButtonPartsInfoAduanaNotaDeCredito().click();
-		c.AnoAduanera().sendKeys("18");
+        Thread.sleep(1000);
+        n.ButtonInfoPartesAduanPersonas().click();
+        c.AnoAduanera().sendKeys("18");
 		c.AduanaDespacho().sendKeys("24");
 		c.NumeroAduanaPatente().sendKeys("1487");
 		c.AnoProgressAduana().sendKeys("8015956");
-		n.AgregarInfoAduanaAsist().click();
-		Thread.sleep(1000);
-		n.ButtonInfoAdicNotaDeCredito().click();
-		c.DescriptInformacion().sendKeys("Great");
+        Thread.sleep(1000);
+        n.ButtonAdcInfoPersonas().click();
+        c.DescriptInformacion().sendKeys("Great");
 		c.RefAdicInfo().sendKeys("abcdef");
-		n.AgregarInfoAdicAsist().click();
-		Thread.sleep(1000);
-		n.ButtonDatosPersoNotaDeCredito().click();
-		c.ExtraDatoNombre().sendKeys("Caducidad");
+        Thread.sleep(1000);
+        n.ButtonDatsPersnPersonas().click();
+        Thread.sleep(1000);
+        c.ExtraDatoNombre().sendKeys("Caducidad");
 		c.ExtraValorDato().sendKeys("31-Diciembre-2019");
-		n.AgregarDatosPersAsist().click();
-		s.AddConsept().click();
 		Thread.sleep(1000);
-		n.ButtonInfAdendaNotaDeCrdito().click();
-		c.DatosGeneralesAdenda().click();
+		ps.AddConsept().click();
+        }
+		ps.ClavePersonasFisicas().sendKeys("abcdef");
+		ps.PlacaPersonasFisicas().sendKeys("12345adc");
+        n.ButtonInfAdcAdendaPersonas().click();
+        c.DatosGeneralesAdenda().click();
 		c.ImportLetraGeneral().sendKeys("abcde");
 		c.NumeroDeOrdenGeneral().sendKeys("12345");
 		c.ObservacionesGeneral().sendKeys("LookingGood");
@@ -166,26 +164,28 @@ public class TestNotaDeCreditoDetail extends base{
 		c.ValorDelDato().sendKeys("60");
 		Thread.sleep(1000);
 		c.AddDatosExtras().click();
-		n.ButtonComprRelacNotaDeCredito().click();
+		n.ButtonComprRelaPersonas().click();
+
 		Thread.sleep(1000);
 		c.SelectTipoDRelacionado().sendKeys("02");
 		c.SelectTipoDRelacionado().sendKeys(Keys.ENTER);
 		c.AgregarRelacionado().click();
 		c.FolioFiscalRelacionado().sendKeys("560a8451-a29c-41d4-a716-544676554400");
 		c.AddRelacionado().click();
-		Thread.sleep(1000);
-		s.EmitirFactura().click();
+        ps.EmitirFactura().click();
 		Thread.sleep(6000);
 		ld.SignOut().click();
-		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+		Thread.sleep(4000);
 		ld.CloseBotton().click();
-		}
+		
+	    }
 	@AfterTest
-	   public void closeBrowser() {
+	public void closeBrowser() {
 		driver.close();
+		
+	}
 	
 	}
-}
  
 
 

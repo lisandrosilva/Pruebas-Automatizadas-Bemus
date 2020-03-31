@@ -23,7 +23,7 @@ import pageObjects.busonfiscal.CommonInfo;
 import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestTuristaPasajeroExtranjeroDetail extends base{
+public class TestTuristaPasajeroExtranjeroDetail2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -64,7 +64,7 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
         CommonLocal l = new CommonLocal(driver);
         CommonPage c = new CommonPage(driver);
         CommonInfo n = new CommonInfo(driver);
-        
+        for(int i=0; i<3; i++) {
         ps.AgregarConsept().click();
         ps.ClaveDelProducto().sendKeys("10215612");
         ps.CantidadConsept().sendKeys("80");
@@ -122,7 +122,7 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		l.ValorExtraDatoPers().sendKeys("999999");
 		l.AgregarDatosPersAsist().click();
         ps.AddConsept().click();
-        
+        }
         ps.TipoDeTransito().sendKeys("Arribo");
         ps.TipoDeTransito().sendKeys(Keys.ENTER);
         ps.DateTransit().sendKeys("20-07-2019");
@@ -182,7 +182,7 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		c.AgregarRelacionado().click();
 		c.FolioFiscalRelacionado().sendKeys("560a8451-a29c-41d4-a716-544676554400");
 		c.AddRelacionado().click();
-
+        Thread.sleep(5000);
         ps.EmitirFactura().click();
         Thread.sleep(6000);
         ld.SignOut().click();

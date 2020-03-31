@@ -191,9 +191,9 @@ public class TestObrasDeArteYAtenguedadDetail extends base{
 	 public void closeBrowser() {
 		driver.close();
 		
-	}
+	 }
 	
-	}
+}
  
 
 

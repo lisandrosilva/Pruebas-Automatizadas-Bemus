@@ -20,10 +20,9 @@ import pageObjects.CommonPage;
 import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonInfo;
-import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestNotariosPublicos extends base{
+public class TestPersonasFisicasIntegranteDeCoordinacion2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -47,12 +46,12 @@ public class TestNotariosPublicos extends base{
 		ld.ingFactura().click();
 		Thread.sleep(1000);
 		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaNotarioPublico().click();
+		fact.FacturaPersonasFisicas().click();
 		Thread.sleep(1000);
 		SearchPage ps = new SearchPage(driver);
 		ps.BasicaSelectFiscal().sendKeys("612");
 		ps.BasicaSelectFiscal().sendKeys(Keys.ENTER);
-		ps.RFC().sendKeys("XAXX010101000");
+		ps.RFC().sendKeys("FUNK671228PH6");
 		ps.SelectCFDI().sendKeys("G03");
         ps.SelectCFDI().sendKeys(Keys.ENTER);	
         ps.formaPago().sendKeys("1");
@@ -61,47 +60,24 @@ public class TestNotariosPublicos extends base{
         ps.SelectMethodPago().click();
         Thread.sleep(1000);
         ps.MethodPago1Exhibicion().click();
+        Thread.sleep(2000);
+        for(int i=0; i<3; i++) {
         ps.AgregarConsept().click();
         ps.ClaveDelProducto().sendKeys("10215612");
         ps.CantidadConsept().sendKeys("80");
         ps.ClaveDeUnidad().sendKeys("H87");
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
-        ps.AddConsept().click();
-        ps.NumeroInstNotarial().sendKeys("99999");
-        ps.DateNotarial().sendKeys("20-08-2018");
-        ps.MontoInstNotarial().sendKeys("8000");
-        ps.IvaInstNotarial().sendKeys("80");
-        ps.SubTotalInstNotarial().sendKeys("4800");
-        ps.CurpInstNotarial().sendKeys("PACG810404HYNTHR04");
-        ps.NumeroDelNotario().sendKeys("999");
-        ps.EntidadNotarial().sendKeys("01");
-        ps.EntidadNotarial().sendKeys(Keys.ENTER);
-        ps.IMUEBLENotarial().sendKeys("01");
-        ps.IMUEBLENotarial().sendKeys(Keys.ENTER);
-        ps.CalleNotarial().sendKeys("Barragan");
-        ps.MunicipioNotarial().sendKeys("San Nicolas");
-        ps.EstadoNotarial().sendKeys("19");
-        ps.EstadoNotarial().sendKeys(Keys.ENTER);
-        Thread.sleep(3000);
-        ps.PaisNotarial().sendKeys("MEX");
-        ps.PaisNotarial().sendKeys(Keys.ENTER);
-        ps.CodigoPostalNotarial().sendKeys("66457");
-        ps.NombreNotarial().sendKeys("Zeferino");
-        ps.ApellidoPaternoNotarial().sendKeys("Tiburcio");
-        ps.RFCNotarial().sendKeys("AAA010101AAA");
-        ps.CurpEnajNotarial().sendKeys("PACG810404HYNTHR04");
-        ps.NombreAdquiNotarial().sendKeys("Miguel Delgado");
-        ps.RFCAdquiNotarial().sendKeys("AAA010101AAA");
-        
+		ps.AddConsept().click();
+        }
+		ps.ClavePersonasFisicas().sendKeys("abcdef");
+		ps.PlacaPersonasFisicas().sendKeys("12345adc");
         
         ps.EmitirFactura().click();
-        Thread.sleep(6000);
-        ld.SignOut().click();
-        Thread.sleep(4000);
-        ld.CloseBotton().click();
-		
-		
+		Thread.sleep(6000);
+		ld.SignOut().click();
+		Thread.sleep(4000);
+		ld.CloseBotton().click();
 		
 	    }
 	@AfterTest
@@ -110,7 +86,7 @@ public class TestNotariosPublicos extends base{
 		
 	}
 	
-	}
+}
  
 
 

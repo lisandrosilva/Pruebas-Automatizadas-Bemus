@@ -81,13 +81,13 @@ public class TestFacturaSimpleComprobanteBorrador extends base{
 	    ld.CloseBotton().click();
 	    
 		}
-	//@AfterTest
-	     //public void closeBrowser() {
-		//driver.close();
+	@AfterTest
+	    public void closeBrowser() {
+		   driver.close();
 	
 	}
 	
-	//}
+ }
  
 
 

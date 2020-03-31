@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,13 +17,11 @@ import org.openqa.selenium.interactions.internal.MouseAction.Button;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import pageObjects.CommonPage;
 import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
-import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
-public class TestPersonasFisicasIntegranteDeCoordinacion extends base{
+public class TestNotaDeCredito2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -43,47 +42,42 @@ public class TestPersonasFisicasIntegranteDeCoordinacion extends base{
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
-		ld.ingFactura().click();
+		ld.ingNotadeCredito().click();
+		SearchPage s = new SearchPage(driver);
+		s.BasicaSelectFiscal().sendKeys("612");
+		s.BasicaSelectFiscal().sendKeys(Keys.ENTER);
+		s.RFC().sendKeys("FUNK671228PH6");
+		s.SelectCFDI().sendKeys("G03");
+		s.SelectCFDI().sendKeys(Keys.ENTER);
+		s.formaPago().sendKeys("1");
 		Thread.sleep(1000);
-		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaPersonasFisicas().click();
+		s.SelectformaPago1().sendKeys("01");
+		s.SelectformaPago1().sendKeys(Keys.ENTER);
 		Thread.sleep(1000);
-		SearchPage ps = new SearchPage(driver);
-		ps.BasicaSelectFiscal().sendKeys("612");
-		ps.BasicaSelectFiscal().sendKeys(Keys.ENTER);
-		ps.RFC().sendKeys("FUNK671228PH6");
-		ps.SelectCFDI().sendKeys("G03");
-        ps.SelectCFDI().sendKeys(Keys.ENTER);	
-        ps.formaPago().sendKeys("1");
-        ps.SelectformaPago1().sendKeys("01");
-        ps.SelectformaPago1().sendKeys(Keys.ENTER);
-        ps.SelectMethodPago().click();
-        Thread.sleep(1000);
-        ps.MethodPago1Exhibicion().click();
-        ps.AgregarConsept().click();
-        ps.ClaveDelProducto().sendKeys("10215612");
-        ps.CantidadConsept().sendKeys("80");
-        ps.ClaveDeUnidad().sendKeys("H87");
-        ps.DescripticionConsept().sendKeys("Factura");
-        ps.ValorUnitarioConsept().sendKeys("75");
-        
-		ps.AddConsept().click();
-		ps.ClavePersonasFisicas().sendKeys("abcdef");
-		ps.PlacaPersonasFisicas().sendKeys("12345adc");
-        
-        ps.EmitirFactura().click();
-		Thread.sleep(6000);
+		s.SelectMethodPago().click();
+		Thread.sleep(1000);
+		s.MethodPago1Exhibicion().click();
+		for(int i=0; i<3; i++) {
+		s.AgregarConsept().click();
+		s.ClaveDelProducto().sendKeys("10215612");
+		s.CantidadConsept().sendKeys("12");
+		s.ClaveDeUnidad().sendKeys("H87");
+		s.DescripticionConsept().sendKeys("Factura");
+		s.ValorUnitarioConsept().sendKeys("80");
+		s.AddConsept().click();
+		}
+		Thread.sleep(2000);
+		s.EmitirFactura().click();
+		Thread.sleep(5000);
 		ld.SignOut().click();
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		ld.CloseBotton().click();
-		
-	    }
+		}
 	@AfterTest
 	public void closeBrowser() {
 		driver.close();
-		
-	}
 	
+	}
 }
  
 

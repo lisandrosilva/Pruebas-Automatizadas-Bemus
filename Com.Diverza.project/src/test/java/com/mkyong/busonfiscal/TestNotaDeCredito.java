@@ -21,7 +21,7 @@ import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
 import resources.base;
 
-public class TestNotaDeCredito<WebElement> extends base{
+public class TestNotaDeCredito extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();

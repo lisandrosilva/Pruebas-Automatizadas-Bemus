@@ -23,7 +23,7 @@ import pageObjects.busonfiscal.CommonInfo;
 import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestTuristaPasajeroExtranjeroDetail extends base{
+public class TestServiciosParcealesDeContrucciondDetail2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -47,7 +47,7 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		ld.ingFactura().click();
 		Thread.sleep(1000);
 		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaTuristaPassagero().click();
+		fact.FacturaServiciosConstrucion().click();
 		Thread.sleep(1000);
 		SearchPage ps = new SearchPage(driver);
 		ps.BasicaSelectFiscal().sendKeys("612");
@@ -61,81 +61,81 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
         ps.SelectMethodPago().click();
         Thread.sleep(1000);
         ps.MethodPago1Exhibicion().click();
-        CommonLocal l = new CommonLocal(driver);
-        CommonPage c = new CommonPage(driver);
         CommonInfo n = new CommonInfo(driver);
-        
+        CommonLocal l = new CommonLocal(driver);
+        Thread.sleep(2000);
+        for(int i=0; i<3; i++) {
         ps.AgregarConsept().click();
         ps.ClaveDelProducto().sendKeys("10215612");
         ps.CantidadConsept().sendKeys("80");
         ps.ClaveDeUnidad().sendKeys("H87");
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
-   
-        n.ButtonRetenidoVs().click();
+
+        Thread.sleep(1000);
+        n.ButtonReteConstr().click();
         l.SelectLocalTaxes().click();
 		l.IVALocalTaxes().click();
 		Thread.sleep(1000);
 		l.SelectFactorTaxes().click();
 		l.TasaF().click();
-		l.CuotaOtasaLocal().sendKeys("0.8");
-        n.AddRetendidoG().click();
-        Thread.sleep(1000);
-        n.ButtonTransVs().click();
-        l.SelectLocalTransf().click();
+		l.CuotaOtasaLocal().sendKeys("8");
+		l.RetenidoAsist().click();
+		Thread.sleep(1000);
+		n.ButtonTransConstr().click();
+		l.SelectLocalTransf().click();
 		Thread.sleep(1000);
 		l.IvaTransfer().click();
 		Thread.sleep(1000);
 		l.SelectTransfertype().click();
 		Thread.sleep(1000);
 		l.TasaTransf().click();
-		l.TasaCuotaTransf().sendKeys("0.8");
-        n.AddTransladoG().click();
-        Thread.sleep(1000);
-        n.ButtonNumeroPediVs().click();
-        l.ValidYearLocalPed().sendKeys("18");
+		l.TasaCuotaTransf().sendKeys("8");
+		l.AgregarTransAsist().click();
+		Thread.sleep(1000);
+		n.ButtonPediConstr().click();
+		l.ValidYearLocalPed().sendKeys("18");
 		l.AduanaDespLocalPed().sendKeys("24");
 		l.PatentNumLocalPed().sendKeys("1487");
 		l.YearPlusProgr().sendKeys("8015991");
-        n.AddNumeroPedG().click();
-        Thread.sleep(1000);
-        n.ButtonDatsPartsCompVs().click();
-        l.ClaveProdLocal().sendKeys("10101512");
+		l.AgregarPedAsist().click();
+		Thread.sleep(1000);
+		n.ButtonDatosPrtsOComprConstr().click();
+		l.ClaveProdLocal().sendKeys("10101512");
 		l.CantidadLocal().sendKeys("446817");
 		l.DescriptLocal().sendKeys("Conejos");
-        l.AgregarParteAsist().click();
-        Thread.sleep(1000);
-        n.ButtonPartsAduaneraVs().click();
-        l.AnoValidAduanera().sendKeys("18");
+		l.AgregarParteAsist().click();
+		Thread.sleep(1000);
+		n.ButtonInfoAduanaContr().click();
+		l.AnoValidAduanera().sendKeys("18");
 		l.AduanaDespacho().sendKeys("24");
 		l.NumeroPatente().sendKeys("1487");
 		l.AnoNumProg().sendKeys("8016004");
-		
-        Thread.sleep(1000);
-        n.ButtonInfoAdcVs().click();
-        l.DescriptOtroIdioma().sendKeys("Inglish");
+		n.ButtonAdicInfoConstruct().click();
+		l.DescriptOtroIdioma().sendKeys("Inglish");
 		l.AdicRefByConsept().sendKeys("abcdg");
 		l.AgregarInfoAduanaAsist().click();
-        Thread.sleep(1000);
-        n.ButtonDatosPersonVs().click();
-        l.ExtraAtribDatoPers().sendKeys("Cantidad");
+		Thread.sleep(1000);
+		n.ButtonDatsPersConstruct().click();
+		l.ExtraAtribDatoPers().sendKeys("Cantidad");
 		l.ValorExtraDatoPers().sendKeys("999999");
 		l.AgregarDatosPersAsist().click();
         ps.AddConsept().click();
-        
-        ps.TipoDeTransito().sendKeys("Arribo");
-        ps.TipoDeTransito().sendKeys(Keys.ENTER);
-        ps.DateTransit().sendKeys("20-07-2019");
+        }
         Thread.sleep(1000);
-        ps.ViaDeTransito().sendKeys("M");
-        ps.ViaDeTransito().sendKeys(Keys.ENTER);
-        ps.TransportIdentication().sendKeys("H123456");
-        ps.TransportIdentificationNumber().sendKeys("CA4");
-        ps.PassenegerNacionality().sendKeys("Mexican");
-        ps.TransportCompany().sendKeys("AeroMexico");
-        Thread.sleep(3000);
-        n.ButtonInfoAdendaVs().click();
-        c.DatosGeneralesAdenda().click();
+        for(int i=0; i<3; i++) {
+        ps.AgregCompleConstruccion().click();
+        ps.AuthoConstruccion().sendKeys("9999999999");
+        ps.CalleConstruccion().sendKeys("San Pedro");
+        ps.MunicipioCostruccion().sendKeys("San Pedro");
+        ps.EstadoConstruccion().sendKeys("19");
+        ps.EstadoConstruccion().sendKeys(Keys.ENTER);
+        ps.CodigoPostalConstr().sendKeys("66457");
+        ps.AddContruccion().click();
+        }
+        CommonPage c = new CommonPage(driver);
+        n.ButtonInfoAdendaConstru().click();
+		c.DatosGeneralesAdenda().click();
 		c.ImportLetraGeneral().sendKeys("abcde");
 		c.NumeroDeOrdenGeneral().sendKeys("12345");
 		c.ObservacionesGeneral().sendKeys("LookingGood");
@@ -175,19 +175,22 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		c.ValorDelDato().sendKeys("60");
 		Thread.sleep(1000);
 		c.AddDatosExtras().click();
-		n.ButtonCompRelaVs().click();
+		n.ButtonComprRelaConstruc().click();
 		Thread.sleep(1000);
 		c.SelectTipoDRelacionado().sendKeys("02");
 		c.SelectTipoDRelacionado().sendKeys(Keys.ENTER);
 		c.AgregarRelacionado().click();
 		c.FolioFiscalRelacionado().sendKeys("560a8451-a29c-41d4-a716-544676554400");
 		c.AddRelacionado().click();
-
+        Thread.sleep(6000);
+       
+     
         ps.EmitirFactura().click();
         Thread.sleep(6000);
         ld.SignOut().click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         ld.CloseBotton().click();
+        
 		
 		
 		

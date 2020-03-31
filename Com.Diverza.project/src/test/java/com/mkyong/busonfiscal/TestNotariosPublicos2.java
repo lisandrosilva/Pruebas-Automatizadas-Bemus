@@ -23,7 +23,7 @@ import pageObjects.busonfiscal.CommonInfo;
 import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestNotariosPublicos extends base{
+public class TestNotariosPublicos2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -61,6 +61,7 @@ public class TestNotariosPublicos extends base{
         ps.SelectMethodPago().click();
         Thread.sleep(1000);
         ps.MethodPago1Exhibicion().click();
+        for(int i=0; i<3; i++) {
         ps.AgregarConsept().click();
         ps.ClaveDelProducto().sendKeys("10215612");
         ps.CantidadConsept().sendKeys("80");
@@ -68,6 +69,7 @@ public class TestNotariosPublicos extends base{
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
         ps.AddConsept().click();
+        }
         ps.NumeroInstNotarial().sendKeys("99999");
         ps.DateNotarial().sendKeys("20-08-2018");
         ps.MontoInstNotarial().sendKeys("8000");
@@ -93,12 +95,10 @@ public class TestNotariosPublicos extends base{
         ps.CurpEnajNotarial().sendKeys("PACG810404HYNTHR04");
         ps.NombreAdquiNotarial().sendKeys("Miguel Delgado");
         ps.RFCAdquiNotarial().sendKeys("AAA010101AAA");
-        
-        
         ps.EmitirFactura().click();
         Thread.sleep(6000);
         ld.SignOut().click();
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         ld.CloseBotton().click();
 		
 		
@@ -110,7 +110,7 @@ public class TestNotariosPublicos extends base{
 		
 	}
 	
-	}
+}
  
 
 

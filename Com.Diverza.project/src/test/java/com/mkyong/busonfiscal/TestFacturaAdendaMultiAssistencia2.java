@@ -16,11 +16,13 @@ import org.openqa.selenium.interactions.internal.MouseAction.Button;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import pageObjects.CommonPage;
 import pageObjects.FacturaPage;
 import pageObjects.SearchPage;
+import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestFacturaBasica extends base{
+public class TestFacturaAdendaMultiAssistencia2 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -55,11 +57,10 @@ public class TestFacturaBasica extends base{
 	    Thread.sleep(2000);
 	    s.BasicaSelectFiscal().sendKeys(Keys.ENTER);
 	    
-	    s.RFC().sendKeys("AAA010101AAA");
-	    Thread.sleep(2000);
+	    s.RFC().sendKeys("MUL9607165C5");
+	    Thread.sleep(3000);
 	   
 	    s.SelectCFDI().sendKeys("G03");
-	    Thread.sleep(1000);
 	    s.SelectCFDI().sendKeys(Keys.ENTER);
 	   
 	    
@@ -71,20 +72,29 @@ public class TestFacturaBasica extends base{
 	    Thread.sleep(1000);
 	    s.MethodPago1Exhibicion().click();
 	    Thread.sleep(2000);
-	    
+	    for(int i=0; i<3; i++) {
 		s.AgregarConsept().click();
 		s.ClaveDelProducto().sendKeys("10215612");
 		s.CantidadConsept().sendKeys("4");
 		s.ClaveDeUnidad().sendKeys("H87");
 		s.DescripticionConsept().sendKeys("Factura Electronica");
 		s.ValorUnitarioConsept().sendKeys("60");
+		Thread.sleep(2000);
 		s.AddConsept().click();
-	    
+	    }
+		Thread.sleep(3000);
+		CommonLocal n = new CommonLocal(driver);
+		n.ClaveDelProvMultiAsist().sendKeys("102015");
+		n.OrdenDePagoMultAsist().sendKeys("123456");
+		n.IdentSinestMultAsist().sendKeys("B12345678");
+		n.PaseMedicoMultiAsist().sendKeys("1234567891");
+		n.CostoMultiAsist().sendKeys("0.08");
+		n.IvaMultiAsist().sendKeys("0.08");
 		Thread.sleep(2000);
 		s.EmitirFactura().click();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		ld.SignOut().click();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		ld.CloseBotton().click();
 		}
 	@AfterTest
@@ -93,7 +103,7 @@ public class TestFacturaBasica extends base{
 	
 	}
 	
-}
+	}
  
 
 

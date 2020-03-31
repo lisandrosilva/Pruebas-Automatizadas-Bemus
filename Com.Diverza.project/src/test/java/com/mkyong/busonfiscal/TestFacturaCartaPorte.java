@@ -55,7 +55,7 @@ public class TestFacturaCartaPorte extends base{
 		s.formaPago().sendKeys("1");
 		s.SelectformaPago1().sendKeys("01");
 		s.SelectformaPago1().sendKeys(Keys.ENTER);
-		for(int i=0; i<=3; i++) {
+		
 		s.AgregarConsept().click();
 	    s.ClaveDelProducto().sendKeys("10215612");
 	    s.CantidadConsept().sendKeys("80");
@@ -64,14 +64,14 @@ public class TestFacturaCartaPorte extends base{
 	    s.ValorUnitarioConsept().sendKeys("75");
 	      
 	    s.AddConsept().click();
-		}
+		
 	    Thread.sleep(2000);
 	        
 	       
 		s.EmitirFactura().click();
 		Thread.sleep(5000);
 		ld.SignOut().click();
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		ld.CloseBotton().click();
 		}
 	@AfterTest

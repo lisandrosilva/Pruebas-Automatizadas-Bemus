@@ -23,7 +23,7 @@ import pageObjects.busonfiscal.CommonInfo;
 import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
-public class TestTuristaPasajeroExtranjeroDetail extends base{
+public class TestVehiculosUsadosDetail3 extends base{
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -47,7 +47,7 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		ld.ingFactura().click();
 		Thread.sleep(1000);
 		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaTuristaPassagero().click();
+		fact.FacturaVehiculoUsado().click();
 		Thread.sleep(1000);
 		SearchPage ps = new SearchPage(driver);
 		ps.BasicaSelectFiscal().sendKeys("612");
@@ -64,21 +64,21 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
         CommonLocal l = new CommonLocal(driver);
         CommonPage c = new CommonPage(driver);
         CommonInfo n = new CommonInfo(driver);
-        
+        for(int i=0; i<3; i++) {
         ps.AgregarConsept().click();
         ps.ClaveDelProducto().sendKeys("10215612");
         ps.CantidadConsept().sendKeys("80");
         ps.ClaveDeUnidad().sendKeys("H87");
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
-   
+  
         n.ButtonRetenidoVs().click();
         l.SelectLocalTaxes().click();
 		l.IVALocalTaxes().click();
 		Thread.sleep(1000);
 		l.SelectFactorTaxes().click();
 		l.TasaF().click();
-		l.CuotaOtasaLocal().sendKeys("0.8");
+		l.CuotaOtasaLocal().sendKeys("8");
         n.AddRetendidoG().click();
         Thread.sleep(1000);
         n.ButtonTransVs().click();
@@ -89,7 +89,7 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		l.SelectTransfertype().click();
 		Thread.sleep(1000);
 		l.TasaTransf().click();
-		l.TasaCuotaTransf().sendKeys("0.8");
+		l.TasaCuotaTransf().sendKeys("8");
         n.AddTransladoG().click();
         Thread.sleep(1000);
         n.ButtonNumeroPediVs().click();
@@ -121,19 +121,23 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
         l.ExtraAtribDatoPers().sendKeys("Cantidad");
 		l.ValorExtraDatoPers().sendKeys("999999");
 		l.AgregarDatosPersAsist().click();
-        ps.AddConsept().click();
         
-        ps.TipoDeTransito().sendKeys("Arribo");
-        ps.TipoDeTransito().sendKeys(Keys.ENTER);
-        ps.DateTransit().sendKeys("20-07-2019");
+        ps.AddConsept().click();
+        }
+        Thread.sleep(2000);
+        for(int i=0; i<3; i++) {
+        ps.AgregarComplVehiUsado().click();
+        ps.MontoAquiVehiUsado().sendKeys("70.000");
+        ps.MontoEnajVehicUsado().sendKeys("20.000");
+        ps.ClaveVehiUsado().sendKeys("2519171");
+        ps.MarcaVehicUsado().sendKeys("Mazda");
+        ps.TipoVehicUsado().sendKeys("SUV");
+        ps.ModeloVehicUsado().sendKeys("2014");
+        ps.ValorVehicUsado().sendKeys("80.000");
         Thread.sleep(1000);
-        ps.ViaDeTransito().sendKeys("M");
-        ps.ViaDeTransito().sendKeys(Keys.ENTER);
-        ps.TransportIdentication().sendKeys("H123456");
-        ps.TransportIdentificationNumber().sendKeys("CA4");
-        ps.PassenegerNacionality().sendKeys("Mexican");
-        ps.TransportCompany().sendKeys("AeroMexico");
-        Thread.sleep(3000);
+        ps.AddUsedVehicle().click();
+        }
+        Thread.sleep(2000);
         n.ButtonInfoAdendaVs().click();
         c.DatosGeneralesAdenda().click();
 		c.ImportLetraGeneral().sendKeys("abcde");
@@ -182,11 +186,11 @@ public class TestTuristaPasajeroExtranjeroDetail extends base{
 		c.AgregarRelacionado().click();
 		c.FolioFiscalRelacionado().sendKeys("560a8451-a29c-41d4-a716-544676554400");
 		c.AddRelacionado().click();
-
+        Thread.sleep(6000);
         ps.EmitirFactura().click();
         Thread.sleep(6000);
         ld.SignOut().click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         ld.CloseBotton().click();
 		
 		

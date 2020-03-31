@@ -94,7 +94,7 @@ public class TestVehiculosUsados extends base{
 		
 	}
 	
-	}
+}
  
 
 
