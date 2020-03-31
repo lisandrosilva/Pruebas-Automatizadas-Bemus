@@ -2,34 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41068" started-at="2020-03-27T21:22:35Z" finished-at="2020-03-27T21:23:16Z">
+  <suite name="Default suite" duration-ms="131628" started-at="2020-03-31T16:04:23Z" finished-at="2020-03-31T16:06:35Z">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:CucumberOptions.TestRunner@18eed359]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="41068" started-at="2020-03-27T21:22:35Z" finished-at="2020-03-27T21:23:16Z">
-      <class name="CucumberOptions.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:CucumberOptions.TestRunner@18eed359]" name="setUpClass" is-config="true" duration-ms="389" started-at="2020-03-27T21:22:35Z" finished-at="2020-03-27T21:22:35Z">
+    <test name="Default test" duration-ms="131628" started-at="2020-03-31T16:04:23Z" finished-at="2020-03-31T16:06:35Z">
+      <class name="com.mkyong.busonfiscal.detail.TestVentaDeVehiculosDetail2">
+        <test-method status="PASS" signature="initiaLiseBrowser()[pri:0, instance:com.mkyong.busonfiscal.detail.TestVentaDeVehiculosDetail2@5ce81285]" name="initiaLiseBrowser" is-config="true" duration-ms="14734" started-at="2020-03-31T16:04:23Z" finished-at="2020-03-31T16:04:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:CucumberOptions.TestRunner@18eed359]" name="feature" duration-ms="40554" started-at="2020-03-27T21:22:35Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-03-27T21:23:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Application Login]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- initiaLiseBrowser -->
+        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:com.mkyong.busonfiscal.detail.TestVentaDeVehiculosDetail2@5ce81285]" name="basePageNavigation" duration-ms="116536" started-at="2020-03-31T16:04:38Z" finished-at="2020-03-31T16:06:34Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:CucumberOptions.TestRunner@18eed359]" name="tearDownClass" is-config="true" duration-ms="6" started-at="2020-03-27T21:23:16Z" finished-at="2020-03-27T21:23:16Z">
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mkyong.busonfiscal.detail.TestVentaDeVehiculosDetail2@5ce81285]" name="closeBrowser" is-config="true" duration-ms="332" started-at="2020-03-31T16:06:34Z" finished-at="2020-03-31T16:06:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- CucumberOptions.TestRunner -->
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.mkyong.busonfiscal.detail.TestVentaDeVehiculosDetail2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
