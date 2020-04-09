@@ -9,11 +9,13 @@ import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import pageObjects.FacturaPage;
+import pageObjects.LandingPage;
 import pageObjects.SearchPage;
 import resources.base;
 
@@ -35,6 +37,13 @@ public class TestClientProducto extends base{
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
+		boolean isDisplayed = driver.findElement(By.xpath("//div[contains(text(),'JIMENEZ ESTRADA SALAS A A')]")).isDisplayed();
+		if(isDisplayed==true) {
+		LandingPage g = new LandingPage(driver);
+		Thread.sleep(2000);
+		g.ButtonFunk().click();
+		g.ButtonJes().click();
+		}else {
 		Thread.sleep(2000);
 		ld.Cliente().click();
 		Thread.sleep(3000);
@@ -67,13 +76,14 @@ public class TestClientProducto extends base{
 		ld.SignOut().click();
 		ld.CloseBotton().click();
 		}
+		}
 	
 	@AfterTest
 	public void closeBrowser() {
 		driver.close();
 		
 	}
-	}
+}
  
 
 

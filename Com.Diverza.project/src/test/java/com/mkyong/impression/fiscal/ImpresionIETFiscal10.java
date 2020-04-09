@@ -25,6 +25,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.Test;
 
 import pageObjects.FacturaPage;
+import pageObjects.LandingPage;
 import pageObjects.SearchPage;
 import resources.base;
 
@@ -46,7 +47,17 @@ public class ImpresionIETFiscal10 extends base{
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
-		Thread.sleep(3000);
+		boolean isDisplayed = driver.findElement(By.xpath("//div[contains(text(),'JIMENEZ ESTRADA SALAS A A')]")).isDisplayed();
+		if(isDisplayed==true) {
+		Thread.sleep(2000);
+		LandingPage g = new LandingPage(driver);
+		Thread.sleep(2000);
+		g.ButtonFunk().click();
+		g.ButtonJes().click();
+		}else {
+			System.out.println("Contninue the operation");
+		}
+		Thread.sleep(2000);
 		ld.MenuDropDown().click();
 		Thread.sleep(3000);
 		ld.ImpresionFiscal().click();

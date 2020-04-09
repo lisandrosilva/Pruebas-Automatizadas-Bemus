@@ -39,7 +39,6 @@ public class TestFacturaBasicaGratis extends base{
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
-		
 		LandingPage g = new LandingPage(driver);
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
@@ -83,12 +82,12 @@ public class TestFacturaBasicaGratis extends base{
 		
 		}
     @AfterTest
-	 public void closeBrowser() {
-		driver.close();
+	    public void closeBrowser() {
+		     driver.close();
 	
-	}
+	  }
 	
-	}
+ }
  
 
 

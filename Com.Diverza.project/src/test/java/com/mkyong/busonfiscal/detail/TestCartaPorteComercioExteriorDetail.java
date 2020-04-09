@@ -20,6 +20,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.CommonPage;
 import pageObjects.FacturaPage;
+import pageObjects.LandingPage;
 import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonInfo;
 import pageObjects.busonfiscal.CommonLocal;
@@ -43,6 +44,16 @@ public class TestCartaPorteComercioExteriorDetail extends base{
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
+		boolean isDisplayed = driver.findElement(By.xpath("//div[contains(text(),'JIMENEZ ESTRADA SALAS A A')]")).isDisplayed();
+		if(isDisplayed==true) {
+		Thread.sleep(2000);
+		LandingPage g = new LandingPage(driver);
+		Thread.sleep(2000);
+		g.ButtonFunk().click();
+		g.ButtonJes().click();
+		}else {
+			System.out.println("Contninue the operation");
+		}
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(1000);

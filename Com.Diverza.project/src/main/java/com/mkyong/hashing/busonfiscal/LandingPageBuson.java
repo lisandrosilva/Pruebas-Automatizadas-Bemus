@@ -22,6 +22,14 @@ public class LandingPageBuson {
         By CartaPorte = By.xpath("//*[@id=\"new_receipt_list\"]/li[3]/div/a");
         By Pagos = By.xpath("//*[@id=\"new_receipt_list\"]/li[4]/div/a");
         
+        By ServiciosMenu = By.xpath("//li[@class='dropdown h-apps']");
+        
+        By TimbreFiscal = By.xpath("/html/body/header/ul/li[2]/ul/li[2]/form/a/span[2]");
+        
+        By ConectorFiscal = By.id("Capa_1");
+        
+        By BuzonFiscal = By.id("Layer_1");
+      
         By ValidacionOK = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
         By ListaRFC = By.id("rfc_list");
@@ -405,10 +413,18 @@ public class LandingPageBuson {
         
         
         
-        
-        
-        
-        
+        public WebElement TimbreFiscal() {
+        	return driver.findElement(TimbreFiscal);
+        }
+        public WebElement ConectorFiscal() {
+        	return driver.findElement(ConectorFiscal);
+        }
+        public WebElement BuzonFiscal() {
+        	return driver.findElement(BuzonFiscal);
+        }
+        public WebElement ServiciosMenu() {
+        	return driver.findElement(ServiciosMenu);
+        }
         public WebElement UploadCertificate() {
         	return driver.findElement(UploadCertificate);
         }

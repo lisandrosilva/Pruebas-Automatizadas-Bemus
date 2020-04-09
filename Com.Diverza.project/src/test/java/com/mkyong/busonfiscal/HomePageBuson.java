@@ -6,6 +6,10 @@ import org.testng.annotations.Test;
 
 import com.mkyong.hashing.busonfiscal.LandingPageBuson;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -20,6 +24,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.Test;
 
 import pageObjects.FacturaPage;
+import pageObjects.LandingPage;
 import pageObjects.SearchPage;
 import resources.base;
 
@@ -33,7 +38,7 @@ public class HomePageBuson extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -41,12 +46,22 @@ public class HomePageBuson extends base{
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
+		boolean isDisplayed = driver.findElement(By.xpath("//div[contains(text(),'JIMENEZ ESTRADA SALAS A A')]")).isDisplayed();
+		if(isDisplayed==true) {
+		Thread.sleep(2000);
+		LandingPage g = new LandingPage(driver);
+		Thread.sleep(2000);
+		g.ButtonFunk().click();
+		g.ButtonJes().click();
+		}else {
+			System.out.println("Contninue the operation");
+		}
 		Thread.sleep(2000);
 		ld.ConfigBotton().click();
 		ld.FolioSeries().click();
 		Thread.sleep(2000);
 		ld.AddFolio().click();
-		ld.SerieFolio().sendKeys("TDT");
+		ld.SerieFolio().sendKeys("TBT");
 		ld.ValorInicialFolio().sendKeys("0");
 		Thread.sleep(3000);
 		JavascriptExecutor js =(JavascriptExecutor)driver;
@@ -58,7 +73,7 @@ public class HomePageBuson extends base{
 		Thread.sleep(1000);
 		ld.AddSucursal().click();
 		ld.SucursalBranch().sendKeys("San Nicolas");
-		ld.SucursalAlias().sendKeys("Prueba5");
+		ld.SucursalAlias().sendKeys("Prueba9");
 		ld.SucursalZip().sendKeys("66457");
 		Thread.sleep(1000);
 		ld.ActivarSucursal().click();
@@ -69,7 +84,7 @@ public class HomePageBuson extends base{
 		
 		ld.AddCertificado().click();
 		Thread.sleep(2000);
-		ld.SelectSucursalCertificado().sendKeys("Prueba5");
+		ld.SelectSucursalCertificado().sendKeys("Prueba9");
 		ld.SelectSucursalCertificado().sendKeys(Keys.ENTER);
 		Thread.sleep(3000);
 		
@@ -81,18 +96,26 @@ public class HomePageBuson extends base{
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('form-control')", element);
 		element.sendKeys("/Users/lisandrosilva/Downloads/Q1NEIEZVTksuemlw/CSD_KARLA_FUENTE_NOLASCO_FUNK671228PH6_20190528_174243s.cer");
 	    Thread.sleep(3000);
-	    
+	    Robot robot = new Robot();
+	    robot.mouseMove(85, 50);
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        Thread.sleep(2000);
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+		Thread.sleep(2000);
 	    
 	    WebElement Keyelement = driver.findElement(By.xpath("//*[@id=\"certificate_key_file\"]"));
 	    JavascriptExecutor jsi = (JavascriptExecutor)driver;
 	    jsi.executeScript("arguments[0].click();",Keyelement);
 	    Thread.sleep(3000);
-	    
-	   
 	    ((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('form-control')", Keyelement);
 		Keyelement.sendKeys("/Users/lisandrosilva/Downloads/Q1NEIEZVTksuemlw/CSD_KARLA_FUENTE_NOLASCO_FUNK671228PH6_20190528_174243.key");
 	    Thread.sleep(2000);
-	    
+	    Robot rob = new Robot();
+	    rob.mouseMove(85, 50);
+        rob.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        Thread.sleep(2000);
+        rob.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+		Thread.sleep(2000);
 	    
 		ld.AddPassword().sendKeys("12345678a");
 		Thread.sleep(2000);
@@ -102,10 +125,11 @@ public class HomePageBuson extends base{
 		Thread.sleep(2000);
 		ld.CloseBotton().click();
 		
+		
 		}
 	@AfterTest
 	     public void closeBrowser() {
-		    driver.close();
+		       driver.close();
 		
 	}
  

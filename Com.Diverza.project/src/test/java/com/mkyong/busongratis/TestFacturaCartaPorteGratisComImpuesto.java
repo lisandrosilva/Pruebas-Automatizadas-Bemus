@@ -105,21 +105,7 @@ public class TestFacturaCartaPorteGratisComImpuesto extends base{
 			l.PatentNumLocalPed().sendKeys("1487");
 			l.YearPlusProgr().sendKeys("8015991");
 	        n.AddNumeroPedG().click();
-	        /*
-	        Thread.sleep(1000);
-	        n.ButtonDatsPartsCompVs().click();
-	        l.ClaveProdLocal().sendKeys("10101512");
-			l.CantidadLocal().sendKeys("446817");
-			l.DescriptLocal().sendKeys("Conejos");
-	        l.AgregarParteAsist().click();
-	        
-	        Thread.sleep(1000);
-	        n.ButtonPartsAduaneraVs().click();
-	        l.AnoValidAduanera().sendKeys("18");
-			l.AduanaDespacho().sendKeys("24");
-			l.NumeroPatente().sendKeys("1487");
-			l.AnoNumProg().sendKeys("8016004");
-			 */
+	       
 	    s.AddConsept().click();
 	    Thread.sleep(2000);
 	        
@@ -131,7 +117,7 @@ public class TestFacturaCartaPorteGratisComImpuesto extends base{
 		   driver.close();
 	
 	}
-}
+ }
  
 
 

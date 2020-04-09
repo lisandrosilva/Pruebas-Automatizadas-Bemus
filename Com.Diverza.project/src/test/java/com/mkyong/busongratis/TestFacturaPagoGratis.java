@@ -78,12 +78,12 @@ public class TestFacturaPagoGratis extends base{
 		
 	    }
 	@AfterTest
-	  public void closeBrowser() {
-		driver.close();
+	   public void closeBrowser() {
+		 driver.close();
 		
 	}
 	
-	}
+	  }
  
 
 

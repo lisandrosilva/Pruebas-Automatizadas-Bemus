@@ -17,6 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import pageObjects.FacturaPage;
+import pageObjects.LandingPage;
 import pageObjects.SearchPage;
 import resources.base;
 
@@ -38,7 +39,11 @@ public class TestBusquedaReportes extends base{
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
-		
+		LandingPage g = new LandingPage(driver);
+		Thread.sleep(2000);
+		g.ButtonFunk().click();
+		g.ButtonJes().click();
+		Thread.sleep(2000);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@class='btn-group bootstrap-select billing_receipt_type_select']")).click();
 		Thread.sleep(3000);

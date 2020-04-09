@@ -74,6 +74,7 @@ public class TestFacturaPagoGratisDetail extends base{
 		s.ImportePago().sendKeys("100");
 		s.ImporteSaldoInsolutPago().sendKeys("1");
 		s.AddPagoComplement().click();
+		Thread.sleep(2000);
 		g.ButtonCompRelaGratis().click();
 		g.SelectTipoRelaGratis().click();
 		g.SustituicionPrevios().click();
@@ -91,7 +92,7 @@ public class TestFacturaPagoGratisDetail extends base{
 		
 	}
 	
-	}
+	 }
  
 
 
