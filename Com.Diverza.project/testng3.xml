@@ -3,107 +3,107 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.mkyong.buson.jes.TestComercioExteriorJes"/>
+      <class name="com.mkyong.buson.jes.ComercioExteriorJesTest"/>
       </classes>
       </test>
       <test name="Donativo">
 	 <classes>
-	   <class name="com.mkyong.buson.jes.TestDonativosJes"/>
+	   <class name="com.mkyong.buson.jes.DonativosJesTest"/>
 	 </classes>
    </test>
    
   <test name="FacturaBasicaGratuito">
      <classes>
-       <class name="com.mkyong.buson.jes.TestFacturaBasicaJes"/>
+       <class name="com.mkyong.buson.jes.FacturaBasicaJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaCartaPorteGratuito">
      <classes>
-       <class name="com.mkyong.buson.jes.TestFacturaCartaPorteJes"/>
+       <class name="com.mkyong.buson.jes.FacturaCartaPorteJesTest"/>
  </classes>
     </test>
     
      <test name="FacturaDetallistaGratuito">
      <classes>
-       <class name="com.mkyong.buson.jes.TestFacturaDetallistaJes"/>
+       <class name="com.mkyong.buson.jes.FacturaDetallistaJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaPago">
      <classes>
-       <class name="com.mkyong.buson.jes.TestFacturaPagoJes"/>
+       <class name="com.mkyong.buson.jes.FacturaPagoJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaImpuestosLocales">
      <classes>
-       <class name="com.mkyong.buson.jes.TestImpuestosLocalesJes"/>
+       <class name="com.mkyong.buson.jes.ImpuestosLocalesJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaINEGratuito">
      <classes>
-       <class name="com.mkyong.buson.jes.TestINEJes"/>
+       <class name="com.mkyong.buson.jes.INEJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaInstituicionesEducativas">
      <classes>
-       <class name="com.mkyong.buson.jes.TestInstituicionesEducativasJes"/>
+       <class name="com.mkyong.buson.jes.InstituicionesEducativasJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaTestLeyendas">
      <classes>
-       <class name="com.mkyong.buson.jes.TestLeyendasFiscalesJes"/>
+       <class name="com.mkyong.buson.jes.LeyendasFiscalesJesTest"/>
  </classes>
     </test>
     
     <test name="NotaDeCredito">
      <classes>
-       <class name="com.mkyong.buson.jes.TestNotaDeCreditoJes"/>
+       <class name="com.mkyong.buson.jes.NotaDeCreditoJesTest"/>
  </classes>
     </test>
     <test name="FacturaNotarioPublico">
      <classes>
-       <class name="com.mkyong.buson.jes.TestNotariosPublicosJes"/>
+       <class name="com.mkyong.buson.jes.NotariosPublicosJesTest"/>
  </classes>
     </test>
     
     <test name="ObrasYArtes">
      <classes>
-       <class name="com.mkyong.buson.jes.TestObrasDeArteYAtenguedadJes"/>
+       <class name="com.mkyong.buson.jes.ObrasDeArteYAtenguedadJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaPagoEnEspecies">
      <classes>
-       <class name="com.mkyong.buson.jes.TestPagoEnEspeciesJes"/>
+       <class name="com.mkyong.buson.jes.PagoEnEspeciesJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaPersonas">
      <classes>
-       <class name="com.mkyong.buson.jes.TestPersonasFisicasIntegranteDeCoordinacionJes"/>
+       <class name="com.mkyong.buson.jes.PersonasFisicasIntegranteDeCoordinacionJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaServicios">
      <classes>
-       <class name="com.mkyong.buson.jes.TestServiciosParcealesDeContruccionJes"/>
+       <class name="com.mkyong.buson.jes.ServiciosParcealesDeContruccionJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaTuristas">
      <classes>
-       <class name="com.mkyong.buson.jes.TestTuristaPasajeroExtranjeroJes"/>
+       <class name="com.mkyong.buson.jes.TuristaPasajeroExtranjeroJesTest"/>
  </classes>
     </test>
     
     <test name="FacturaVehiculoUsado">
      <classes>
-       <class name="com.mkyong.buson.jes.TestVehiculosUsadosJes"/>
+       <class name="com.mkyong.buson.jes.VehiculosUsadosJesTest"/>
  </classes>
     </test>
     
@@ -111,7 +111,7 @@
  
  <test name="FacturaVentaVehiculos">
      <classes>
-       <class name="com.mkyong.buson.jes.TestVentaDeVehiculosJes"/>
+       <class name="com.mkyong.buson.jes.VentaDeVehiculosJesTest"/>
  </classes>
     </test>
     

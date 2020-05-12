@@ -3,130 +3,130 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.mkyong.busonfiscal.detail.TestCartaPorteComercioExteriorDetail"/>
+      <class name="com.mkyong.busonfiscal.detail.CartaPorteComercioExteriorDetailTest"/>
       </classes>
       </test>
       <test name="ComercioExteriorDetail">
 	 <classes>
-	   <class name="com.mkyong.busonfiscal.detail.TestComercioExteriorDetail"/>
+	   <class name="com.mkyong.busonfiscal.detail.ComercioExteriorDetailTest"/>
 	 </classes>
    </test>
    
   <test name="DonativosDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestDonativosDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.DonativosDetailTest"/>
  </classes>
     </test>
     
     <test name="AdendaMultiassitenciaDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestFacturaAdendaMultiAssistenciaDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.FacturaAdendaMultiAssistenciaDetailTest"/>
  </classes>
     </test>
     
      <test name="FacturaBasicadetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestFacturaBasicaDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.FacturaBasicaDetailTest"/>
  </classes>
     </test>
    
     <test name="CartaPorteDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestFacturaCartaPorteDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.FacturaCartaPorteDetailTest"/>
  </classes>
     </test>
     
       <test name="DetallistaDetallista">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestFacturaDetallistaDetallista"/>
+       <class name="com.mkyong.busonfiscal.detail.FacturaDetallistaDetallistaTest"/>
  </classes>
     </test>
     
    
    <test name="PagoDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestFacturaPagoDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.FacturaPagoDetailTest"/>
  </classes>
     </test>
     
     <test name="ImpuestosLocalesDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestImpuestosLocalesDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.ImpuestosLocalesDetailTest"/>
  </classes>
     </test>
     
     <test name="INEDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestINEDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.INEDetailTest"/>
  </classes>
     </test>
     
     <test name="InstituicionesEducativasDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestInstituicionesEducativasDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.InstituicionesEducativasDetailTest"/>
  </classes>
     </test>
     
     <test name="LeyendasFiscalesDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestLeyendasFiscalesDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.LeyendasFiscalesDetailTest"/>
  </classes>
     </test>
   
     
     <test name="DeCreditoDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestNotaDeCreditoDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.NotaDeCreditoDetailTest"/>
  </classes>
     </test>
     
     <test name="NotariosPublicosDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestNotariosPublicosDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.NotariosPublicosDetailTest"/>
  </classes>
     </test>
     
     <test name="ObrasYartesDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestObrasDeArteYAtenguedadDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.ObrasDeArteYAtenguedadDetailTest"/>
  </classes>
  
     </test>
     <test name="PagoEnEspeciesDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestPagoEnEspeciesDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.PagoEnEspeciesDetailTest"/>
  </classes>
  
    </test>
     <test name="PeronasFisicasDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestPersonasFisicasIntegranteDeCoordinacionDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.PersonasFisicasIntegranteDeCoordinacionDetailTest"/>
  </classes>
     </test>
    
     
     <test name="ServiciosParcealesDeConstruccionDetail">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestServiciosParcealesDeContrucciondDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.ServiciosParcealesDeContrucciondDetailTest"/>
  </classes>
     </test>
     
    
  <test name="TuristaPasageroExtranjero">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestTuristaPasajeroExtranjeroDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.TuristaPasajeroExtranjeroDetailTest"/>
  </classes>
     </test>
     
     <test name="VehiculosUsados">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestVehiculosUsadosDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.VehiculosUsadosDetailTest"/>
  </classes>
     </test>
 
      <test name="VentaDeVehiculos">
      <classes>
-       <class name="com.mkyong.busonfiscal.detail.TestVentaDeVehiculosDetail"/>
+       <class name="com.mkyong.busonfiscal.detail.VentaDeVehiculosDetailTest"/>
  </classes>
     </test>
     

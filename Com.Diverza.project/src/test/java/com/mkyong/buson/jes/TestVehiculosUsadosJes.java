@@ -103,7 +103,7 @@ public class TestVehiculosUsadosJes extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

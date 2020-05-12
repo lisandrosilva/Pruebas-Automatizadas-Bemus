@@ -208,7 +208,7 @@ public class TestVentaDeVehiculosJesDetail extends base{
 	    }
 	@AfterTest
 	  public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

@@ -86,7 +86,7 @@ public class LandingPageBuson {
         
         By SignOut = By.cssSelector("[stroke*='#000']");
         
-        By LogBotClose = By.xpath("//*[@id=\"header\"]/ul/li[4]/ul/li[3]/form/a");
+        By LogBotClose = By.xpath("/html/body/header/ul/li[4]/ul/li[2]/form/a/i");
         
         By DatosFiscales = By.xpath("//*[@id=\"billing-menu\"]/ul[2]/li[7]/ul/li[1]/a");
         

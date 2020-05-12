@@ -3,52 +3,52 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.mkyong.busongratis.TestFacturaBasicaGratis"/>
+      <class name="com.mkyong.busongratis.FacturaBasicaGratisTest"/>
       </classes>
       </test>
       
       
       <test name="BasicaDetail">
 	 <classes>
-	   <class name="com.mkyong.busongratis.TestFacturaBasicaGratisDetail"/>
+	   <class name="com.mkyong.busongratis.FacturaBasicaGratisDetailTest"/>
 	 </classes>
       </test>
       
       <test name="CartaPorte">
 	 <classes>
-	   <class name="com.mkyong.busongratis.TestFacturaCartaPorteGratis"/>
+	   <class name="com.mkyong.busongratis.FacturaCartaPorteGratisTest"/>
 	 </classes>
       </test>
    
     <test name="CartaPorteComImpuesto">
 	 <classes>
-	   <class name="com.mkyong.busongratis.TestFacturaCartaPorteGratisComImpuesto"/>
+	   <class name="com.mkyong.busongratis.FacturaCartaPorteGratisComImpuestoTest"/>
 	 </classes>
       </test>
    
    
   <test name="FacturaBasicaGratuito">
      <classes>
-       <class name="com.mkyong.busongratis.TestFacturaPagoGratis"/>
+       <class name="com.mkyong.busongratis.FacturaPagoGratisTest"/>
  </classes>
     </test>
     
     <test name="FacturaBasicaGratuitoDetai">
      <classes>
-       <class name="com.mkyong.busongratis.TestFacturaPagoGratisDetail"/>
+       <class name="com.mkyong.busongratis.FacturaPagoGratisDetailTest"/>
  </classes>
     </test>
     
     
     <test name="FacturaCartaPorteGratuito">
      <classes>
-       <class name="com.mkyong.busongratis.TestNotaDeCreditoGratis"/>
+       <class name="com.mkyong.busongratis.NotaDeCreditoGratisTest"/>
  </classes>
     </test>
     
      <test name="FacturaCartaPorteGratuitoDetail">
      <classes>
-       <class name="com.mkyong.busongratis.TestNotaDeCreditoGratisDetail"/>
+       <class name="com.mkyong.busongratis.NotaDeCreditoGratisDetailTest"/>
  </classes>
     </test>
     

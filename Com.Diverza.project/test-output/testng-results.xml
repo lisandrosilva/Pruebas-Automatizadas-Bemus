@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21984" started-at="2020-04-09T16:55:46Z" finished-at="2020-04-09T16:56:08Z">
+  <suite name="Default suite" duration-ms="49319" started-at="2020-05-12T17:27:38Z" finished-at="2020-05-12T17:28:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21984" started-at="2020-04-09T16:55:46Z" finished-at="2020-04-09T16:56:08Z">
-      <class name="com.mkyong.timbrefiscal.TimbreFiscal">
-        <test-method status="PASS" signature="initiaLiseBrowser()[pri:0, instance:com.mkyong.timbrefiscal.TimbreFiscal@52a86356]" name="initiaLiseBrowser" is-config="true" duration-ms="7082" started-at="2020-04-09T16:55:46Z" finished-at="2020-04-09T16:55:53Z">
+    <test name="Default test" duration-ms="49319" started-at="2020-05-12T17:27:38Z" finished-at="2020-05-12T17:28:28Z">
+      <class name="com.mkyong.busonfiscal.FacturaBasicaTest">
+        <test-method status="PASS" signature="initiaLiseBrowser()[pri:0, instance:com.mkyong.busonfiscal.FacturaBasicaTest@78c03f1f]" name="initiaLiseBrowser" is-config="true" duration-ms="8116" started-at="2020-05-12T17:27:38Z" finished-at="2020-05-12T17:27:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiaLiseBrowser -->
-        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:com.mkyong.timbrefiscal.TimbreFiscal@52a86356]" name="basePageNavigation" duration-ms="14868" started-at="2020-04-09T16:55:53Z" finished-at="2020-04-09T16:56:08Z">
+        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:com.mkyong.busonfiscal.FacturaBasicaTest@78c03f1f]" name="basePageNavigation" duration-ms="40109" started-at="2020-05-12T17:27:46Z" finished-at="2020-05-12T17:28:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basePageNavigation -->
-      </class> <!-- com.mkyong.timbrefiscal.TimbreFiscal -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.mkyong.busonfiscal.FacturaBasicaTest@78c03f1f]" name="closeBrowser" is-config="true" duration-ms="1041" started-at="2020-05-12T17:28:27Z" finished-at="2020-05-12T17:28:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.mkyong.busonfiscal.FacturaBasicaTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mkyong.timbrefiscal.TimbreFiscal">
+      <class name="com.mkyong.busonfiscal.FacturaBasicaTest">
         <methods>
           <include name="basePageNavigation"/>
           <include name="initiaLiseBrowser"/>
         </methods>
-      </class> <!-- com.mkyong.timbrefiscal.TimbreFiscal -->
+      </class> <!-- com.mkyong.busonfiscal.FacturaBasicaTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

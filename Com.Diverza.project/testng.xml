@@ -3,49 +3,49 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.mkyong.busonfiscal.HomePageBuson"/>
+      <class name="com.mkyong.busonfiscal.HomePageBusonTest"/>
       </classes>
       </test>
       <test name="ClientProducto">
 	 <classes>
-	   <class name="com.mkyong.busonfiscal.TestClientProducto"/>
+	   <class name="com.mkyong.busonfiscal.ClientProductoTest"/>
 	 </classes>
    </test>
    
   <test name="Comprobante3">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestReportesEmitidos3"/>
+       <class name="com.mkyong.busonfiscal.ReportesEmitidosTest3"/>
  </classes>
     </test>
     
     <test name="Cancelacion">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestReportesEmitidosCancelacion"/>
+       <class name="com.mkyong.busonfiscal.ReportesEmitidosCancelacionTest"/>
  </classes>
     </test>
     
     <test name="Password">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestPassword"/>
+       <class name="com.mkyong.busonfiscal.PasswordTest"/>
  </classes>
     </test>
     
     <test name="Email">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestEmail"/>
+       <class name="com.mkyong.busonfiscal.EmailTest"/>
  </classes>
     </test>
     
     <test name="EmailPassword">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestEmailAndPassword"/>
+       <class name="com.mkyong.busonfiscal.EmailAndPasswordTest"/>
  </classes>
     </test>
     
     
     <test name="EmailPasswordCorrect">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestEmailPasswordCorrect"/>
+       <class name="com.mkyong.busonfiscal.EmailPasswordCorrectTest"/>
  </classes>
     </test>
     
@@ -53,87 +53,87 @@
      
     <test name="DuplicadoFacturaSimples">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestReportesEmitidosDuplicarComprobante"/>
+       <class name="com.mkyong.busonfiscal.ReportesEmitidosDuplicarComprobanteTest"/>
  </classes>
     </test>
      
     
      <test name="DuplicadoComplLeyendasFiscales">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestReportesEmitidosDuplicarComplLeyendasFiscales"/>
+       <class name="com.mkyong.busonfiscal.ReportesEmitidosDuplicarComplLeyendasFiscalesTest"/>
  </classes>
     </test>
      
     <test name="BusquedaDeReportesEmitos5">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes5"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest5"/>
  </classes>
     </test>
    
    
    <test name="BusquedaDeReportesEmitos4">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes4"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest4"/>
  </classes>
     </test> 
     
     
     <test name="BusquedaDeReportesEmitos3">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes3"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest3"/>
  </classes>
     </test> 
     
     
     <test name="BusquedaDeReportesEmitos2">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes2"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest2"/>
  </classes>
     </test> 
     
     
     <test name="BusquedaDeReportesEmitos6">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes6"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest6"/>
  </classes>
     </test> 
     
     
     <test name="BusquedaDeReportesEmitos7">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes7"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest7"/>
  </classes>
     </test> 
     
     <test name="BusquedaDeReportesEmitos8">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes8"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest8"/>
  </classes>
     </test> 
     
     
      <test name="BusquedaDeReportesEmitos9">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes9"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest9"/>
  </classes>
     </test> 
     
     <test name="BusquedaDeReportesEmitos10">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes10"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest10"/>
  </classes>
     </test> 
     
     
      <test name="BusquedaDeReportesEmitos11">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes11"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest11"/>
  </classes>
     </test> 
     
      <test name="BusquedaDeReportesEmitos12">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes12"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest12"/>
  </classes>
     </test> 
     
@@ -141,14 +141,14 @@
     
     <test name="BusquedaDeReportesEmitos14">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes14"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest14"/>
  </classes>
     </test> 
     
     
     <test name="BusquedaDeReportesEmitos15">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestBusquedaReportes15"/>
+       <class name="com.mkyong.busonfiscal.BusquedaReportesTest15"/>
  </classes>
     </test> 
     
@@ -159,90 +159,90 @@
     
     <test name="Comprobante4">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestReportesEmitidos4"/>
+       <class name="com.mkyong.busonfiscal.ReportesEmitidosTest4"/>
  </classes>
     </test>
     
      <test name="FacturaBasica">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestFacturaBasica"/>
+       <class name="com.mkyong.busonfiscal.FacturaBasicaTest"/>
  </classes>
     </test>
     
     <test name="Factura">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestFacturaCartaPorte"/>
+       <class name="com.mkyong.busonfiscal.FacturaCartaPorteTest"/>
  </classes>
     </test>
     
     <test name="Factura1">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestFacturaPago"/>
+       <class name="com.mkyong.busonfiscal.FacturaPagoTest"/>
  </classes>
     </test>
     
     <test name="Factura2">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestNotaDeCredito"/>
+       <class name="com.mkyong.busonfiscal.NotaDeCreditoTest"/>
  </classes>
     </test>
     
     <test name="Factura3">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestFacturaDetallista"/>
+       <class name="com.mkyong.busonfiscal.FacturaDetallistaTest"/>
  </classes>
     </test>
     
     <test name="Factura4">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestImpuestosLocales"/>
+       <class name="com.mkyong.busonfiscal.ImpuestosLocalesTest"/>
  </classes>
     </test>
     
     <test name="Factura5">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestINE"/>
+       <class name="com.mkyong.busonfiscal.INETest"/>
  </classes>
     </test>
     <test name="Factura6">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestInstituicionesEducativas"/>
+       <class name="com.mkyong.busonfiscal.InstituicionesEducativasTest"/>
  </classes>
     </test>
     
     <test name="Factura7">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestLeyendasFiscales"/>
+       <class name="com.mkyong.busonfiscal.LeyendasFiscalesTest"/>
  </classes>
     </test>
     
     <test name="Factura8">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestServiciosParcealesDeContruccion"/>
+       <class name="com.mkyong.busonfiscal.ServiciosParcealesDeContruccionTest"/>
  </classes>
     </test>
     
     <test name="Factura9">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestTuristaPasajeroExtranjero"/>
+       <class name="com.mkyong.busonfiscal.TuristaPasajeroExtranjeroTest"/>
  </classes>
     </test>
     
     <test name="Factura10">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestVehiculosUsados"/>
+       <class name="com.mkyong.busonfiscal.VehiculosUsadosTest"/>
  </classes>
     </test>
     
     <test name="Factura11">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestVentaDeVehiculos"/>
+       <class name="com.mkyong.busonfiscal.VentaDeVehiculosTest"/>
  </classes>
     </test>
     
     <test name="Factura12">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestDonativos"/>
+       <class name="com.mkyong.busonfiscal.DonativosTest"/>
  </classes>
     </test>
     
@@ -250,38 +250,38 @@
  
  <test name="Factura13">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestNotariosPublicos"/>
+       <class name="com.mkyong.busonfiscal.NotariosPublicosTest"/>
  </classes>
     </test>
     
     <test name="Factura14">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestObrasDeArteYAtenguedad"/>
+       <class name="com.mkyong.busonfiscal.ObrasDeArteYAtenguedadTest"/>
  </classes>
     </test>
 
      <test name="Factura15">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestPagoEnEspecies"/>
+       <class name="com.mkyong.busonfiscal.PagoEnEspeciesTest"/>
  </classes>
     </test>
     
     <test name="Factura17">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestPersonasFisicasIntegranteDeCoordinacion"/>
+       <class name="com.mkyong.busonfiscal.PersonasFisicasIntegranteDeCoordinacionTest"/>
  </classes>
     </test>
     
     
     <test name="Factura18">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestFacturaAdendaMultiAssistencia"/>
+       <class name="com.mkyong.busonfiscal.FacturaAdendaMultiAssistenciaTest"/>
  </classes>
     </test>  
     
     <test name="ReportesEmitidos5">
      <classes>
-       <class name="com.mkyong.busonfiscal.TestReportesEmitidos5"/>
+       <class name="com.mkyong.busonfiscal.ReportesEmitidosTest5"/>
  </classes>
     </test>  
     
