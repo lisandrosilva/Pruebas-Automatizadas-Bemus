@@ -26,6 +26,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class ObrasDeArteYAtenguedadJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -35,7 +36,7 @@ public class ObrasDeArteYAtenguedadJesTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void obrasArtesAnteguedadJes() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -54,6 +55,8 @@ public class ObrasDeArteYAtenguedadJesTest extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);

@@ -27,6 +27,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class FacturaDetallistaDetallistaTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -36,7 +37,7 @@ public class FacturaDetallistaDetallistaTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaDetallistadetail1() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		       driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -318,7 +319,7 @@ public class FacturaDetallistaDetallistaTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

@@ -27,6 +27,7 @@ import resources.base;
 // Emitir Una Factura Impuestos Locales
 
 public class ImpuestosLocalesJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -114,7 +115,7 @@ public class ImpuestosLocalesJesTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

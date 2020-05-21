@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class LeyendasFiscalesJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -95,7 +96,7 @@ public class LeyendasFiscalesJesTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

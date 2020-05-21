@@ -22,6 +22,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class BusquedaReportesTest25 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -31,7 +32,7 @@ public class BusquedaReportesTest25 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void busquedaDeReportes25() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -67,7 +68,7 @@ public class BusquedaReportesTest25 extends base{
 		ld.SendEmail().sendKeys("lisandro.silva@diverza.com");
 		Thread.sleep(3000);
 		ld.Enviar().click();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
 		ld.SignOut().click();
 		Thread.sleep(3000);
 		ld.CloseBotton().click();
@@ -76,7 +77,7 @@ public class BusquedaReportesTest25 extends base{
 	}
 	@AfterTest
 	     public void closeBrowser() {
-		   driver.close();
+		   driver.quit();
 		
 	
  

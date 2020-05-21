@@ -22,6 +22,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class BusquedaReportesgratuitoTest5 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -31,7 +32,7 @@ public class BusquedaReportesgratuitoTest5 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void busquedaDeReportesGratuito5() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -55,7 +56,7 @@ public class BusquedaReportesgratuitoTest5 extends base{
 	}
 	@AfterTest
 	     public void closeBrowser() {
-		    driver.close();
+		    driver.quit();
 		
 	
  

@@ -24,6 +24,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class FacturaBasicaDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -33,7 +34,7 @@ public class FacturaBasicaDetailTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaBasicaDetail() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -203,7 +204,7 @@ public class FacturaBasicaDetailTest extends base{
 		}
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 	
 	}
 	

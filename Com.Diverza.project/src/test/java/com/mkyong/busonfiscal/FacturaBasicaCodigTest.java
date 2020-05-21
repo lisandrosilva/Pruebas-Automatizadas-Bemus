@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class FacturaBasicaCodigTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -32,7 +33,7 @@ public class FacturaBasicaCodigTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaBasicaCodig() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -48,6 +49,8 @@ public class FacturaBasicaCodigTest extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -98,18 +101,18 @@ public class FacturaBasicaCodigTest extends base{
 		s.HotP().sendKeys("284583");
 		Thread.sleep(2000);
 		s.GenerarCodigo().click();
-		//ld.SignOut().click();
+		ld.SignOut().click();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		//ld.CloseBotton().click();
+		ld.CloseBotton().click();
 		}
 		}
-	//@AfterTest
-	//public void closeBrowser() {
-		//driver.close();
+	@AfterTest
+    public void closeBrowser() {
+		driver.quit();
 	
 	}
 	
-	//}
+	}
  
 
 

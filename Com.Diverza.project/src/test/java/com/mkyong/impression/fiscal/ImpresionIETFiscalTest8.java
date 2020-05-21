@@ -30,6 +30,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ImpresionIETFiscalTest8 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -39,7 +40,7 @@ public class ImpresionIETFiscalTest8 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
+	public void impressionFiscal8() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -115,7 +116,7 @@ public class ImpresionIETFiscalTest8 extends base{
 	
 	@AfterTest
 	     public void closeBrowser() {
-		    driver.close();
+		    driver.quit();
 		
 	}
  }

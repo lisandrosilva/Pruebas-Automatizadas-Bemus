@@ -21,6 +21,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ReportesEmitidosDuplicarComplComercioExteriorTransladoTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -30,7 +31,7 @@ public class ReportesEmitidosDuplicarComplComercioExteriorTransladoTest extends 
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void duplicadoComercioExteriorTranslado() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -46,6 +47,8 @@ public class ReportesEmitidosDuplicarComplComercioExteriorTransladoTest extends 
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Emitidos().click();
 		ld.EmitidoRFC().sendKeys("CACX7605101P8");
@@ -57,13 +60,15 @@ public class ReportesEmitidosDuplicarComplComercioExteriorTransladoTest extends 
 		ld.EmitidoFirstOpt().click();
 		Thread.sleep(2000);
 		ld.EstatusEmitido().click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		ld.IdentificarStatusEmit().click();
 		Thread.sleep(2000);
 		ld.AceptarStatus().click();
 		Thread.sleep(2000);
 		ld.DuplicarEmitido().click();
+		Thread.sleep(1000);
 		ld.DuplicadoComercioTranslado().click();
+		Thread.sleep(2000);
 		ld.DuplicacionEmitido().click();
 		Thread.sleep(2000);
 		ld.EmitirDuplicado().click();
@@ -74,7 +79,7 @@ public class ReportesEmitidosDuplicarComplComercioExteriorTransladoTest extends 
 		}
 	@AfterTest
 		public void closeBrowser() {
-			driver.close();
+			driver.quit();
 			
 		}
 		

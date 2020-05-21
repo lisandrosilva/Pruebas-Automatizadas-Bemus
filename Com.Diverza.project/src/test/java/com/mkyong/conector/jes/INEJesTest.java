@@ -25,6 +25,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class INEJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -103,7 +104,7 @@ public class INEJesTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

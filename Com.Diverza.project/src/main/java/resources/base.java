@@ -14,7 +14,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class base {
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	public Properties prop;
 	public WebDriver initializeDriver() throws IOException 
 	
@@ -30,7 +30,7 @@ public class base {
 		if (browserName.equals("Chrome"))
 		{
 			//Execute
-			System.setProperty("webdriver.chrome.driver","/Users/lisandrosilva/Documents/Drivers/chromedriver");
+			System.setProperty("webdriver.chrome.driver","/Users/lisandrosilva/Documents/Drivers/chromedriver ");
 		                driver = new ChromeDriver();
 		                 
 		}

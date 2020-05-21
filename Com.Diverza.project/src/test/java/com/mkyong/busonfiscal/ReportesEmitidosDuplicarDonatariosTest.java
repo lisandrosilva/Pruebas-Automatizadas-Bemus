@@ -30,11 +30,11 @@ public class ReportesEmitidosDuplicarDonatariosTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void duplicadoDonatarios() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
-		//DUPLICADO DE FACTURA COMPLEMENTOS OBRAS ARTES Y ANTEGUEDAD
+		
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
@@ -46,6 +46,8 @@ public class ReportesEmitidosDuplicarDonatariosTest extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Emitidos().click();
 		ld.EmitidoRFC().sendKeys("CACX7605101P8");
@@ -63,7 +65,9 @@ public class ReportesEmitidosDuplicarDonatariosTest extends base{
 		ld.AceptarStatus().click();
 		Thread.sleep(2000);
 		ld.DuplicarEmitido().click();
+		Thread.sleep(1000);
 		ld.DuplicarDonatarios().click();
+		Thread.sleep(2000);
 		ld.DuplicacionEmitido().click();
 		Thread.sleep(2000);
 		ld.EmitirDuplicado().click();
@@ -75,7 +79,7 @@ public class ReportesEmitidosDuplicarDonatariosTest extends base{
 		}
 	@AfterTest
 		public void closeBrowser() {
-			driver.close();
+			driver.quit();
 			
 		}
 		

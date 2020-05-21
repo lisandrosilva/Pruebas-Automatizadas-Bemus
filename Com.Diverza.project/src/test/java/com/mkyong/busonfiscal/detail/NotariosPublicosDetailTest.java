@@ -26,6 +26,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class NotariosPublicosDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -35,7 +36,7 @@ public class NotariosPublicosDetailTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void notariosPublicosDetail() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -224,7 +225,7 @@ public class NotariosPublicosDetailTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

@@ -24,7 +24,8 @@ import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
-public class NotaDeCreditoGratisDetailTest2<WebElement> extends base{
+public class NotaDeCreditoGratisDetailTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -34,7 +35,7 @@ public class NotaDeCreditoGratisDetailTest2<WebElement> extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void notaDeCreditoGratisdetail2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -46,6 +47,8 @@ public class NotaDeCreditoGratisDetailTest2<WebElement> extends base{
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
 		g.ButtonSUL().click();
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -186,7 +189,7 @@ public class NotaDeCreditoGratisDetailTest2<WebElement> extends base{
 		}
 	@AfterTest
 	    public void closeBrowser() {
-		   driver.close();
+		   driver.quit();
 	
 	}
  }

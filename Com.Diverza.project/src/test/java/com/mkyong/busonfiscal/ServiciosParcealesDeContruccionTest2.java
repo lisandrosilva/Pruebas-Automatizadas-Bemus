@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ServiciosParcealesDeContruccionTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -32,7 +33,7 @@ public class ServiciosParcealesDeContruccionTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void serviciosParcealesDeConstruccion2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -48,6 +49,8 @@ public class ServiciosParcealesDeContruccionTest2 extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -76,6 +79,7 @@ public class ServiciosParcealesDeContruccionTest2 extends base{
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
         ps.AddConsept().click();
+        }
         Thread.sleep(1000);
         ps.AgregCompleConstruccion().click();
         ps.AuthoConstruccion().sendKeys("9999999999");
@@ -85,7 +89,7 @@ public class ServiciosParcealesDeContruccionTest2 extends base{
         ps.EstadoConstruccion().sendKeys(Keys.ENTER);
         ps.CodigoPostalConstr().sendKeys("66457");
         ps.AddContruccion().click();
-        }
+        
         Thread.sleep(3000);
         ps.EmitirFactura().click();
         Thread.sleep(6000);
@@ -97,8 +101,7 @@ public class ServiciosParcealesDeContruccionTest2 extends base{
 	
 	 @AfterTest
 	 public void closeBrowser() {
-		driver.close();
-		
+		driver.quit();
 	}
 	
 	}

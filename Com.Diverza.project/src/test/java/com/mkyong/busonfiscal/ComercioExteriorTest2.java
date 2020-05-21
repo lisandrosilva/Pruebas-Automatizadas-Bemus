@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ComercioExteriorTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -32,7 +33,7 @@ public class ComercioExteriorTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void comercioExterior2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -47,6 +48,8 @@ public class ComercioExteriorTest2 extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -99,9 +102,16 @@ public class ComercioExteriorTest2 extends base{
         Thread.sleep(2000);
         
         ps.AgregarMercancia().click();
+        Thread.sleep(1000);
         ps.MercanciaIDNumb().sendKeys("999999");
-        ps.CurrencyMercancia().sendKeys("1000");
         ps.MercanciaIDNumb().sendKeys(Keys.ENTER);
+        ps.CantidadBienesAduana().sendKeys("10");
+        Thread.sleep(1000);
+        ps.ClaveUnidadMerca().sendKeys("05");
+        ps.ClaveUnidadMerca().sendKeys(Keys.ENTER);
+        Thread.sleep(1000);
+        ps.PrecioUniMerc().sendKeys("1000");
+       
         ps.MercanciaDescript().sendKeys("AUDI");
         ps.AddDescriptMercancia().click();
        
@@ -119,7 +129,7 @@ public class ComercioExteriorTest2 extends base{
 	    }
 	@AfterTest
 	     public void closeBrowser() {
-		        driver.close();
+		        driver.quit();
 		
 	}
 	

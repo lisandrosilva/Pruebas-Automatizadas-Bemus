@@ -25,6 +25,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class FacturaAdendaMultiAssistenciaDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -34,7 +35,7 @@ public class FacturaAdendaMultiAssistenciaDetailTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaAdendamultiAssistenciaDetail() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -171,7 +172,7 @@ public class FacturaAdendaMultiAssistenciaDetailTest extends base{
 		}
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 	
 	}
 	

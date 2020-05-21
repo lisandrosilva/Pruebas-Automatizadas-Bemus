@@ -26,6 +26,7 @@ import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
 public class NotaDeCreditoJesDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -199,7 +200,7 @@ public class NotaDeCreditoJesDetailTest extends base{
 		}
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 	
 	}
  }

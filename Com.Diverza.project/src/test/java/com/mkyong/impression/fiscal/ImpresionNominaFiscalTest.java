@@ -28,6 +28,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ImpresionNominaFiscalTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -37,7 +38,7 @@ public class ImpresionNominaFiscalTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
+	public void impressionNomina() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		

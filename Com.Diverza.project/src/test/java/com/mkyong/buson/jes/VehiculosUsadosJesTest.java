@@ -22,7 +22,8 @@ import pageObjects.LandingPage;
 import pageObjects.SearchPage;
 import resources.base;
 
-public class TestVentaDeVehiculosJes extends base{
+public class VehiculosUsadosJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -32,7 +33,7 @@ public class TestVentaDeVehiculosJes extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void vehiculosUsadosJes() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -50,14 +51,16 @@ public class TestVentaDeVehiculosJes extends base{
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
-		}
+	    }
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
 		ld.ingFactura().click();
 		Thread.sleep(1000);
 		FacturaPage fact = new FacturaPage(driver);
-		fact.FacturaVehiculos().click();
+		fact.FacturaVehiculoUsado().click();
 		Thread.sleep(1000);
 		SearchPage ps = new SearchPage(driver);
 		ps.BasicaSelectFiscal().sendKeys("603");
@@ -77,16 +80,21 @@ public class TestVentaDeVehiculosJes extends base{
         ps.ClaveDeUnidad().sendKeys("H87");
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
-        ps.ClaveVehicular().sendKeys("12345678");
-        ps.NIVVehicular().sendKeys("12345678");
-        ps.AgregarVentaVehicular().click();
         ps.AddConsept().click();
-        
+        Thread.sleep(2000);
+        ps.AgregarComplVehiUsado().click();
+        ps.MontoAquiVehiUsado().sendKeys("70.000");
+        ps.MontoEnajVehicUsado().sendKeys("20.000");
+        ps.ClaveVehiUsado().sendKeys("2519171");
+        ps.MarcaVehicUsado().sendKeys("Mazda");
+        ps.TipoVehicUsado().sendKeys("SUV");
+        ps.ModeloVehicUsado().sendKeys("2014");
+        ps.ValorVehicUsado().sendKeys("80.000");
+        Thread.sleep(1000);
+        ps.AddUsedVehicle().click();
         Thread.sleep(2000);
         
-        
-        
-        
+
         ps.EmitirFactura().click();
         Thread.sleep(6000);
         ld.SignOut().click();

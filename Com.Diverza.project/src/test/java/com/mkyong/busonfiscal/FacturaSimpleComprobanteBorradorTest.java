@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class FacturaSimpleComprobanteBorradorTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -32,7 +33,7 @@ public class FacturaSimpleComprobanteBorradorTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaSimplesBorrador() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -48,6 +49,8 @@ public class FacturaSimpleComprobanteBorradorTest extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -84,6 +87,8 @@ public class FacturaSimpleComprobanteBorradorTest extends base{
 	    Thread.sleep(3000);
 	    ld.OkButton().click();
 	    Thread.sleep(3000);
+	    Thread.sleep(3000);
+	    ld.SideBar().click();
 	    ld.Borradores().click();
 	    Thread.sleep(3000);
 	    ld.SignOut().click();
@@ -94,7 +99,7 @@ public class FacturaSimpleComprobanteBorradorTest extends base{
 		}
 	@AfterTest
 	    public void closeBrowser() {
-		   driver.close();
+		   driver.quit();
 	
 	}
 	

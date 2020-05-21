@@ -28,6 +28,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class NominaFiscalTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -37,7 +38,7 @@ public class NominaFiscalTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
+	public void nominaFiscal() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -55,10 +56,14 @@ public class NominaFiscalTest extends base{
 		}else {
 			System.out.println("Contninue the operation");
 		}
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.MenuDropDown().click();
 		Thread.sleep(3000);
 		ld.NominaFiscal().click();
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(3000);
 		ld.ImportarNomina().click();
 		Thread.sleep(3000);
@@ -76,7 +81,7 @@ public class NominaFiscalTest extends base{
 	    robot.keyRelease(KeyEvent.VK_ENTER);
 	    Thread.sleep(2000);
 	    ld.ContinuarNomina().click();
-		Thread.sleep(20000);
+		Thread.sleep(2000);
 		ld.EmitirNomina().click();
 		Thread.sleep(2000);
 		ld.ListaProceNomina().click();
@@ -89,7 +94,7 @@ public class NominaFiscalTest extends base{
 	
 	@AfterTest
 	     public void closeBrowser() {
-		    driver.close();
+		    driver.quit();
 		
 	}
 }

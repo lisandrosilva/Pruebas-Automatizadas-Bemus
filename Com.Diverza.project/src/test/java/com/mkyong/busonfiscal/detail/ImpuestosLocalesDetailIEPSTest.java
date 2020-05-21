@@ -28,6 +28,7 @@ import resources.base;
 // Emitir Una Factura Impuestos Locales
 
 public class ImpuestosLocalesDetailIEPSTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -37,7 +38,7 @@ public class ImpuestosLocalesDetailIEPSTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaImpuestosLocalesII() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -197,7 +198,7 @@ public class ImpuestosLocalesDetailIEPSTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

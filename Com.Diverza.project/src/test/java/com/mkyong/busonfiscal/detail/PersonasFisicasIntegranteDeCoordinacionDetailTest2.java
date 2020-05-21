@@ -25,6 +25,7 @@ import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
 public class PersonasFisicasIntegranteDeCoordinacionDetailTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -34,7 +35,7 @@ public class PersonasFisicasIntegranteDeCoordinacionDetailTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void personasFisicasIntegrantDeCoorDetail2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -193,11 +194,11 @@ public class PersonasFisicasIntegranteDeCoordinacionDetailTest2 extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	
-	}
+}
  
 
 

@@ -24,7 +24,8 @@ import pageObjects.SearchPage;
 import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
-public class NotaDeCreditoGratisTest2<WebElement> extends base{
+public class NotaDeCreditoGratisTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -34,7 +35,7 @@ public class NotaDeCreditoGratisTest2<WebElement> extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void notadeCreditoGratisSimpl2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -46,6 +47,8 @@ public class NotaDeCreditoGratisTest2<WebElement> extends base{
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
 		g.ButtonSUL().click();
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -71,6 +74,7 @@ public class NotaDeCreditoGratisTest2<WebElement> extends base{
 		s.SelectMethodPago().click();
 		Thread.sleep(1000);
 		s.MethodPago1Exhibicion().click();
+		for(int i=0; i<=3; i++) {
 		s.AgregarConsept().click();
 		s.ClaveDelProducto().sendKeys("10215612");
 		s.CantidadConsept().sendKeys("200");
@@ -78,14 +82,7 @@ public class NotaDeCreditoGratisTest2<WebElement> extends base{
 		s.DescripticionConsept().sendKeys("Factura");
 		s.ValorUnitarioConsept().sendKeys("80");	
 		s.AddConsept().click();
-		Thread.sleep(3000);
-		s.AgregarConsept().click();
-		s.ClaveDelProducto().sendKeys("10215612");
-		s.CantidadConsept().sendKeys("200");
-		s.ClaveDeUnidad().sendKeys("H87");
-		s.DescripticionConsept().sendKeys("Factura");
-		s.ValorUnitarioConsept().sendKeys("80");	
-		s.AddConsept().click();
+		}
 		Thread.sleep(5000);
 		s.EmitirFactura().click();
 		
@@ -93,7 +90,7 @@ public class NotaDeCreditoGratisTest2<WebElement> extends base{
 		}
 	@AfterTest
 	    public void closeBrowser() {
-		   driver.close();
+		   driver.quit();
 	
 	  }
    }

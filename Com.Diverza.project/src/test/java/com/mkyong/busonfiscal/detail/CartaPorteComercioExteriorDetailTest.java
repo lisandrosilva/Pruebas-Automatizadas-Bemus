@@ -27,6 +27,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class CartaPorteComercioExteriorDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -36,7 +37,7 @@ public class CartaPorteComercioExteriorDetailTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void cartaPorteComercioExteriorDetail() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -234,13 +235,13 @@ public class CartaPorteComercioExteriorDetailTest extends base{
 		
 		
 	    }
-	//@AfterTest
-	//public void closeBrowser() {
-		//driver.close();
+	@AfterTest
+	public void closeBrowser() {
+		driver.quit();
 		
 	}
 	
-	//}
+}
  
 
 

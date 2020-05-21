@@ -30,6 +30,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ImpresionIETFiscalTest16 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();

@@ -39,7 +39,7 @@ public class ImpresionIETFiscalTest10 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
+	public void impressionFiscal10() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -115,7 +115,7 @@ public class ImpresionIETFiscalTest10 extends base{
 	
 	@AfterTest
 	     public void closeBrowser() {
-		    driver.close();
+		    driver.quit();
 		
 	}
 }

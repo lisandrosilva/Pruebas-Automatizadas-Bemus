@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mkyong.busonfiscal.FacturaBasicaTest">
+      <class name="com.mkyong.regression.RegressionTest">
         <methods>
-          <include name="basePageNavigation"/>
+          <include name="closeBrowser"/>
           <include name="initiaLiseBrowser"/>
+          <include name="facturaBasica"/>
         </methods>
-      </class> <!-- com.mkyong.busonfiscal.FacturaBasicaTest -->
+      </class> <!-- com.mkyong.regression.RegressionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -33,7 +33,7 @@ public class FacturaBasicaDetailTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaBasicaDetail2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -207,7 +207,7 @@ public class FacturaBasicaDetailTest2 extends base{
 		}
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 	
 	}
 	

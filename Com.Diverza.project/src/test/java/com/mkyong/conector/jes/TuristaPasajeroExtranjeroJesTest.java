@@ -104,7 +104,7 @@ public class TuristaPasajeroExtranjeroJesTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

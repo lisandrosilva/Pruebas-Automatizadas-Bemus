@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class VehiculosUsadosTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -32,7 +33,7 @@ public class VehiculosUsadosTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void vehiculosUsados2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -48,6 +49,8 @@ public class VehiculosUsadosTest2 extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -76,7 +79,7 @@ public class VehiculosUsadosTest2 extends base{
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
         ps.AddConsept().click();
-        
+        }
         Thread.sleep(2000);
         ps.AgregarComplVehiUsado().click();
         ps.MontoAquiVehiUsado().sendKeys("70.000");
@@ -89,7 +92,7 @@ public class VehiculosUsadosTest2 extends base{
         Thread.sleep(1000);
         ps.AddUsedVehicle().click();
         Thread.sleep(2000);
-        }
+        
 
         ps.EmitirFactura().click();
         Thread.sleep(6000);
@@ -102,7 +105,7 @@ public class VehiculosUsadosTest2 extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

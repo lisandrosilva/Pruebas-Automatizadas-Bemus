@@ -18,6 +18,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class EmailPasswordCorrectTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -27,7 +28,7 @@ public class EmailPasswordCorrectTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void correoContrasenaCorreta() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -43,7 +44,7 @@ public class EmailPasswordCorrectTest extends base{
 		}
 	@AfterTest
 	  public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
  

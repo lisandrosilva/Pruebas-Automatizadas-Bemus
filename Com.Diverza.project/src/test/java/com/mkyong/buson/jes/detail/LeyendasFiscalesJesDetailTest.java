@@ -26,6 +26,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class LeyendasFiscalesJesDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -35,7 +36,7 @@ public class LeyendasFiscalesJesDetailTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void leyendasFiscalesDetailJes() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -52,8 +53,11 @@ public class LeyendasFiscalesJesDetailTest extends base{
 		LandingPage g = new LandingPage(driver);
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
+		Thread.sleep(1000);
 		g.ButtonJes().click();
 		}
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);

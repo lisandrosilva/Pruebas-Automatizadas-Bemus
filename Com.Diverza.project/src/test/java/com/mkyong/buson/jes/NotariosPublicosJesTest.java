@@ -26,6 +26,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class NotariosPublicosJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -35,7 +36,7 @@ public class NotariosPublicosJesTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void notariosPublicosJes() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -43,7 +44,7 @@ public class NotariosPublicosJesTest extends base{
 		ld.ingPortal().sendKeys("lisandro.silva");
 		ld.ingPortal1().sendKeys("Diverza1*");
 		ld.ingPortal11().click();
-		boolean isDisplayed = driver.findElement(By.xpath("")).isDisplayed();
+		boolean isDisplayed = driver.findElement(By.xpath("//div[contains(text(),'JIMENEZ ESTRADA SALAS A A')]")).isDisplayed();
 		if(isDisplayed==true) {
 			ld.ServiciosMenu().click();
 			Thread.sleep(2000);
@@ -54,6 +55,8 @@ public class NotariosPublicosJesTest extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);

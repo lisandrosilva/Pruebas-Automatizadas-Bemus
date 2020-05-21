@@ -10,361 +10,361 @@ public class LandingPageBuson {
 	
 	public WebDriver driver;
 	
-        By Email = By.id("session_username");
-        By Password = By.id("session_password");
-        By Ingresar = By.cssSelector("[type='submit']");
-        By Advanced = By.id("details-button");
-        By Proceed = By.id("proceed-link");
-        By DropFistP = By.cssSelector("div[class*=mc-wrap]");
-        By CrearCompr = By.xpath("//*[@id=\"billing-menu\"]/ul[1]/li[2]/a");
-        By Factura = By.xpath("//*[@id=\"new_receipt_list\"]/li[1]/div/a");
-        By NotadeCredito = By.xpath("//*[@id=\"new_receipt_list\"]/li[2]/div/a");
-        By CartaPorte = By.xpath("//*[@id=\"new_receipt_list\"]/li[3]/div/a");
-        By Pagos = By.xpath("//*[@id=\"new_receipt_list\"]/li[4]/div/a");
+       private By Email = By.id("session_username");
+       private By Password = By.id("session_password");
+       private By Ingresar = By.cssSelector("[type='submit']");
+       private By Advanced = By.id("details-button");
+       private By Proceed = By.id("proceed-link");
+       private By DropFistP = By.cssSelector("div[class*=mc-wrap]");
+       private By CrearCompr = By.xpath("//*[@id=\"billing-menu\"]/ul[1]/li[2]/a");
+       private By Factura = By.xpath("//*[@id=\"new_receipt_list\"]/li[1]/div/a");
+       private By NotadeCredito = By.xpath("//*[@id=\"new_receipt_list\"]/li[2]/div/a");
+       private By CartaPorte = By.xpath("//*[@id=\"new_receipt_list\"]/li[3]/div/a");
+       private By Pagos = By.xpath("//*[@id=\"new_receipt_list\"]/li[4]/div/a");
         
-        By ServiciosMenu = By.xpath("//li[@class='dropdown h-apps']");
+       private By SideBar = By.xpath("//div[@class='mc-wrap']");
         
-        By TimbreFiscal = By.xpath("/html/body/header/ul/li[2]/ul/li[2]/form/a/span[2]");
+       private By ServiciosMenu = By.xpath("//li[@class='dropdown h-apps']");
         
-        By ConectorFiscal = By.id("Capa_1");
+       private By TimbreFiscal = By.xpath("/html/body/header/ul/li[2]/ul/li[2]/form/a/span[2]");
         
-        By BuzonFiscal = By.id("Layer_1");
+       private By ConectorFiscal = By.id("Capa_1");
+        
+       private By BuzonFiscal = By.id("Layer_1");
       
-        By ValidacionOK = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
+       private By ValidacionOK = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
-        By ListaRFC = By.id("rfc_list");
+       private By ListaRFC = By.id("rfc_list");
         
-        By CloseSearch = By.xpath("/html/body/header/div[2]/div/form/i[1]");
+       private By CloseSearch = By.xpath("/html/body/header/div[2]/div/form/i[1]");
         
-        By Search = By.xpath("/html/body/header/ul/li[1]/a/i");
+       private By Search = By.xpath("/html/body/header/ul/li[1]/a/i");
         
-        By ImpresionFiscal = By.linkText("Impresión Fiscal");
+       private By ImpresionFiscal = By.linkText("Impresión Fiscal");
         
-        By PlantillasImpresion = By.xpath("/html/body/section/section/div/div/div[1]/a/i");
+       private By PlantillasImpresion = By.xpath("/html/body/section/section/div/div/div[1]/a/i");
         
-        By ImpresionBasica = By.cssSelector("[href='/templates/1_invoice']");
+       private By ImpresionBasica = By.cssSelector("[href='/templates/1_invoice']");
         
-        By FormatoCartaImprBasic = By.cssSelector("[title='Formato - Carta']");
+       private By FormatoCartaImprBasic = By.cssSelector("[title='Formato - Carta']");
         
-        By FormatoCartaHorizBasic = By.linkText("Formato - Carta horizontal");
+       private  By FormatoCartaHorizBasic = By.linkText("Formato - Carta horizontal");
         
-        By TemplateName = By.id("template_name");
+       private  By TemplateName = By.id("template_name");
         
-        By TemplateNote = By.id("template_note");
+       private  By TemplateNote = By.id("template_note");
         
-        By NominaImpresionFiscal = By.cssSelector("[href='#tab-2']");
+       private By NominaImpresionFiscal = By.cssSelector("[href='#tab-2']");
         
-        By PagoImprFiscal = By.cssSelector("[href='#tab-3']");
+       private By PagoImprFiscal = By.cssSelector("[href='#tab-3']");
         
-        By TemplatePagoImpr = By.cssSelector("[href='/templates/3_payment']");
+       private  By TemplatePagoImpr = By.cssSelector("[href='/templates/3_payment']");
         
-        By TemplateNominaImpr = By.cssSelector("[href='/templates/5_payroll']");
+       private By TemplateNominaImpr = By.cssSelector("[href='/templates/5_payroll']");
         
-        By CrearTemplate = By.xpath("/html/body/section/section/div/form/div[2]/div/div/div[2]/button");
+       private By CrearTemplate = By.xpath("/html/body/section/section/div/form/div[2]/div/div/div[2]/button");
         
-        By SearchRFC = By.xpath("/html/body/header/div[2]/div/form/i[2]");
+       private By SearchRFC = By.xpath("/html/body/header/div[2]/div/form/i[2]");
         
-        By MenuDropDown = By.xpath("/html/body/section/aside[2]/ul/li/div/button/span[1]");
+       private By MenuDropDown = By.xpath("/html/body/section/aside[2]/ul/li/div/button/span[1]");
         
-        By NominaFiscal = By.linkText("Nómina Fiscal");
+       private  By NominaFiscal = By.linkText("Nómina Fiscal");
         
-        By DescargaNomina = By.cssSelector("[href='/files/nominafiscal-template_1_2_cfdi33_v1.32.xlsx']");
+       private By DescargaNomina = By.cssSelector("[href='/files/nominafiscal-template_1_2_cfdi33_v1.32.xlsx']");
         
-        By ImportarNomina = By.xpath("/html/body/section/aside[2]/div[2]/ul[2]/li[2]/a");
+       private  By ImportarNomina = By.xpath("/html/body/section/aside[2]/div[2]/ul[2]/li[2]/a");
         
-        By ListaDeProcessoNomina = By.cssSelector("[href='/paysheets']");
+       private  By ListaDeProcessoNomina = By.xpath("//a[contains(text(),'Ver lista de procesos')]");
         
-        By CargarNomina = By.cssSelector("[href='/paysheets/new']");
+       private By CargarNomina = By.cssSelector("[href='/paysheets/new']");
         
-        By ContinuarNomina = By.xpath("/html/body/section/section/div/div/div[2]/div/div/form/div[4]/div/button");
+       private  By ContinuarNomina = By.xpath("/html/body/section/section/div/div/div[2]/div/div/form/div[4]/div/button");
         
-        By EmitirNomina  = By.xpath("/html/body/section/section/div/div/div[2]/div[2]/form/div/div/button");
+       private  By EmitirNomina  = By.xpath("/html/body/section/section/div/div/div[2]/div[2]/form/div/div/button");
         
-        By Servicios = By.cssSelector("[data-ma-action*='submenu-toggle']");
+       private  By Servicios = By.cssSelector("[data-ma-action*='submenu-toggle']");
         
-        By Configuration = By.xpath("/html/body/section/aside[2]/div[2]/ul[2]/li[6]/a");
+       private  By Configuration = By.xpath("/html/body/section/aside[2]/div[2]/ul[2]/li[6]/a");
         
-        By SignOut = By.cssSelector("[stroke*='#000']");
+       private By SignOut = By.cssSelector("[stroke*='#000']");
         
-        By LogBotClose = By.xpath("/html/body/header/ul/li[4]/ul/li[2]/form/a/i");
+       private By LogBotClose = By.xpath("//i[contains(text(),'power_settings_new')]");
         
-        By DatosFiscales = By.xpath("//*[@id=\"billing-menu\"]/ul[2]/li[7]/ul/li[1]/a");
+       private By DatosFiscales = By.xpath("//*[@id=\"billing-menu\"]/ul[2]/li[7]/ul/li[1]/a");
         
-        By Sucursales = By.cssSelector("[href*='/branches']");
+       private By Sucursales = By.cssSelector("[href*='/branches']");
         
-        By Certificados = By.cssSelector("[href*='/certificates']");
+       private  By Certificados = By.cssSelector("[href*='/certificates']");
         
-        By SelectSucCert = By.cssSelector("[data-id='certificate_branch_office_id']");
+       private  By SelectSucCert = By.cssSelector("[data-id='certificate_branch_office_id']");
         
-        By Producto = By.cssSelector("[href*='/products']");
+       private  By Producto = By.cssSelector("[href*='/products']");
         
-        By SeriesFolio = By.cssSelector("[href*='/serials']");
+       private  By SeriesFolio = By.cssSelector("[href*='/serials']");
         
-        By Usuarios = By.xpath("//*[@id=\"billing-menu\"]/ul[2]/li[7]/ul/li[6]/a");
+       private  By Usuarios = By.xpath("//*[@id=\"billing-menu\"]/ul[2]/li[7]/ul/li[6]/a");
         
-        By Perfiles = By.xpath("//*[@id=\"billing-menu\"]/ul[2]/li[7]/ul/li[7]/a");
+       private By Perfiles = By.xpath("//*[@id=\"billing-menu\"]/ul[2]/li[7]/ul/li[7]/a");
         
-        By AddCertificado = By.cssSelector("[href*='/certificates/new']");
+       private  By AddCertificado = By.cssSelector("[href*='/certificates/new']");
         
-        By AddArchivoCer = By.xpath("//*[@id=\"certificate_cer_file\"]");
+       private  By AddArchivoCer = By.xpath("//*[@id=\"certificate_cer_file\"]");
         
-        By AddArchivoKey = By.xpath("//*[@id=\"certificate_key_file\"]");
+       private  By AddArchivoKey = By.xpath("//*[@id=\"certificate_key_file\"]");
         
-        By AddPassword = By.id("certificate_passphrase");
+       private By AddPassword = By.id("certificate_passphrase");
         
-        By UploadCertificate = By.xpath("/html/body/section/section/div/div/div[2]/div/form/div[9]/div/button");
+       private By UploadCertificate = By.xpath("/html/body/section/section/div/div/div[2]/div/form/div[9]/div/button");
         
         
-        By AddSucursal = By.cssSelector("[href*='/branches/new']");
+       private By AddSucursal = By.cssSelector("[href*='/branches/new']");
         
-        By SucursalBranch = By.id("branch_name");
+       private By SucursalBranch = By.id("branch_name");
         
-        By SucursalAlias = By.id("branch_alias");
+       private  By SucursalAlias = By.id("branch_alias");
         
-        By SucursalZip = By.id("branch_zip_code");
+       private By SucursalZip = By.id("branch_zip_code");
         
-        By SaveSucursal = By.xpath("/html/body/section/section/div/div/div[2]/div/form/div[5]/div/button");
+       private By SaveSucursal = By.xpath("/html/body/section/section/div/div/div[2]/div/form/div[5]/div/button");
         
-        By ActivarSucursal = By.id("branch_is_active");
+       private By ActivarSucursal = By.id("branch_is_active");
         
-        By PrincipalSucursal = By.id("branch_is_main");
+       private By PrincipalSucursal = By.id("branch_is_main");
         
-        By AddFolios = By.cssSelector(".btn-float");
+       private By AddFolios = By.cssSelector(".btn-float");
         
-        By SerieFolio = By.id("serial_serial_number");
+       private By SerieFolio = By.id("serial_serial_number");
         
-        By ValorInicialFolio = By.id("serial_begin");
+       private By ValorInicialFolio = By.id("serial_begin");
         
-        By ValorFinalFolio = By.name("serial[end]");
+       private By ValorFinalFolio = By.name("serial[end]");
         
-        By AgregarFolio = By.cssSelector("[type*='submit']");
+       private By AgregarFolio = By.cssSelector("[type*='submit']");
         
-        By AddProducto = By.cssSelector("[href*='/products/new?page=']");
+       private By AddProducto = By.cssSelector("[href*='/products/new?page=']");
         
-        By NameProduct = By.id("product_name");
+       private By NameProduct = By.id("product_name");
         
-        By ClaveDelProducto = By.id("product_key_product_service");
+       private By ClaveDelProducto = By.id("product_key_product_service");
         
-        By ClaveDeUnidadPro = By.id("product_key_unit");
+       private By ClaveDeUnidadPro = By.id("product_key_unit");
         
-        By ValorUnitarioProduct = By.id("product_unit_value");
+       private By ValorUnitarioProduct = By.id("product_unit_value");
         
-        By DescripcionDelPro = By.id("product_description");
+       private By DescripcionDelPro = By.id("product_description");
         
-        By GuardarProduct = By.cssSelector("button.pull-right");
+       private By GuardarProduct = By.cssSelector("button.pull-right");
         
-        By Client = By.cssSelector("[href*='/customers']");
+       private By Client = By.cssSelector("[href*='/customers']");
         
-        By AddClient = By.cssSelector("[href*='/customers/new?page=']");
+       private By AddClient = By.cssSelector("[href*='/customers/new?page=']");
          
-        By RFCClient = By.id("customer_rfc");
+       private By RFCClient = By.id("customer_rfc");
         
-        By GuardarClient = By.cssSelector("button.pull-right");
+       private By GuardarClient = By.cssSelector("button.pull-right");
         
-        By Emitidos = By.cssSelector("#billing-menu > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)");
+       private By Emitidos = By.cssSelector("#billing-menu > ul:nth-child(2) > li:nth-child(1) > a:nth-child(1)");
         
-        By EmitidoRFC = By.id("document_rfc_receiver");
+       private By EmitidoRFC = By.id("document_rfc_receiver");
         
-        By EmitidoSerie = By.id("document_receipt_serie");
+       private By EmitidoSerie = By.id("document_receipt_serie");
         
-        By EmitidoFolio = By.id("document_receipt_folio");
+       private  By EmitidoFolio = By.id("document_receipt_folio");
         
-        By EmitidoDataInicial = By.id("document_init_date");
+       private By EmitidoDataInicial = By.id("document_init_date");
         
-        By EmitidoDataFinal = By.id("document_end_date");
+       private By EmitidoDataFinal = By.id("document_end_date");
         
-        By CheckBoxEmitido = By.cssSelector("[type*='checkbox']");
+       private  By CheckBoxEmitido = By.cssSelector("[type*='checkbox']");
         
-        By CheckFistOpEmi = By.cssSelector(".select-box");
+       private  By CheckFistOpEmi = By.cssSelector(".select-box");
         
-        By ExportarEmitido = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
+       private  By ExportarEmitido = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
-        By EnviarEmitido = By.xpath("//button[@class='btn btn-default btn-anyrfc btn-sent']");
+       private  By EnviarEmitido = By.xpath("//button[@class='btn btn-default btn-anyrfc btn-sent']");
         
-        By DescargarEmitido = By.cssSelector("button.btn:nth-child(4)");
+       private By DescargarEmitido = By.cssSelector("button.btn:nth-child(4)");
         
-        By BuscarEmitido = By.cssSelector("button.btn-primary:nth-child(1)");
+       private  By BuscarEmitido = By.cssSelector("button.btn-primary:nth-child(1)");
         
-        By DescargarEmitidoXML = By.cssSelector("[data-value*='xml']");
+       private By DescargarEmitidoXML = By.cssSelector("[data-value*='xml']");
         
-        By DescargarEmitidoPDF = By.cssSelector("[data-value*='pdf']");
+       private  By DescargarEmitidoPDF = By.cssSelector("[data-value*='pdf']");
         
-        By DescargarEmitidoBoth = By.cssSelector("[data-value*='zip']");
+       private  By DescargarEmitidoBoth = By.cssSelector("[data-value*='zip']");
         
-        By DescargaFinal = By.cssSelector(".swal2-confirm");
+       private By DescargaFinal = By.cssSelector(".swal2-confirm");
         
-        By EstatusEmitido = By.cssSelector("tr.active > td:nth-child(12) > div:nth-child(1) > a:nth-child(6)");
+       private By EstatusEmitido = By.cssSelector("tr.active > td:nth-child(12) > div:nth-child(1) > a:nth-child(6)");
         
-        By DuplicarEmitido = By.cssSelector("[data-original-title*='Duplicar']");
+       private By DuplicarEmitido = By.cssSelector("[data-original-title*='Duplicar']");
         
-        By DuplicacionEmitido = By.id("duplicate_receipt");
+       private By DuplicacionEmitido = By.id("duplicate_receipt");
         
-        By EmitirDuplicado = By.cssSelector("button.btn-lg");
+       private  By EmitirDuplicado = By.cssSelector("button.btn-lg");
         
-        By VistaRapidaEmitido = By.cssSelector("tr.active > td:nth-child(12) > div:nth-child(1) > a:nth-child(1)");
+       private  By VistaRapidaEmitido = By.cssSelector("tr.active > td:nth-child(12) > div:nth-child(1) > a:nth-child(1)");
         
-        By SalirVistaEmitido = By.cssSelector(".btn-link");
+       private By SalirVistaEmitido = By.cssSelector(".btn-link");
         
-        By PDFVistaEmitido = By.cssSelector("[data-original-title*='Ver PDF']");
+       private By PDFVistaEmitido = By.cssSelector("[data-original-title*='Ver PDF']");
         
-        By XMLVistaEmitido = By.cssSelector("[data-original-title*='Descargar XML']");
+       private  By XMLVistaEmitido = By.cssSelector("[data-original-title*='Descargar XML']");
         
-        By ExportarPaginaActivaEm = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
+       private  By ExportarPaginaActivaEm = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
-        By IdentificarStatusEmit = By.cssSelector(".swal2-confirm");
+       private By IdentificarStatusEmit = By.cssSelector(".swal2-confirm");
         
-        By AceptarStatusEmit = By.xpath("//*[@class='swal2-confirm swal2-styled']");
+       private By AceptarStatusEmit = By.xpath("//*[@class='swal2-confirm swal2-styled']");
         
-        By ExportarCFDI = By.xpath("//*[@class='btn btn-default btn-export']");
+       private By ExportarCFDI = By.xpath("//*[@class='btn btn-default btn-export']");
         
-        By ClientName = By.id("customer_business_name");
+       private By ClientName = By.id("customer_business_name");
         
-        By PhoneClient = By.id("customer_telefono");
+       private  By PhoneClient = By.id("customer_telefono");
         
-        By EmailClient = By.id("customer_email");
+       private By EmailClient = By.id("customer_email");
         
-        By ClientCountry = By.id("customer_pais");
+       private By ClientCountry = By.id("customer_pais");
         
-        By ClientState = By.id("customer_estado");
+       private By ClientState = By.id("customer_estado");
         
-        By ClientMunicipio = By.id("customer_municipio");
+       private By ClientMunicipio = By.id("customer_municipio");
         
-        By ClientColonia = By.id("customer_colonia");
+       private By ClientColonia = By.id("customer_colonia");
         
-        By ClientCalle = By.id("customer_calle");
+       private  By ClientCalle = By.id("customer_calle");
         
-        By ClientActivo = By.id("customer_active");
+       private By ClientActivo = By.id("customer_active");
         
-        By ActivateProduct = By.id("product_is_active");
+       private By ActivateProduct = By.id("product_is_active");
         
-        By BusonFiscal = By.xpath("/html/body/header/ul/li[2]/ul/li[1]/form/a");
+       private By BusonFiscal = By.xpath("/html/body/header/ul/li[2]/ul/li[1]/form/a");
         
-        By CrearComprobanteBuson = By.cssSelector("[href*='/receipts/new']");
+       private By CrearComprobanteBuson = By.cssSelector("[href*='/receipts/new']");
         
-        By BottonSendXMLPDF = By.cssSelector("[title='XML - PDF']");
+       private By BottonSendXMLPDF = By.cssSelector("[title='XML - PDF']");
         
-        By SendEmail = By.name("data[emails][0]");
+       private By SendEmail = By.name("data[emails][0]");
         
-        By Enviar = By.id("send-receipt");
+       private By Enviar = By.id("send-receipt");
         
-        By SaveDraft = By.id("save_draft");
+       private By SaveDraft = By.id("save_draft");
         
-        By DraftBox = By.xpath("//input[@class='swal2-input']");
+       private By DraftBox = By.xpath("//input[@class='swal2-input']");
         
-        By SaveText = By.cssSelector("button.swal2-confirm.swal2-styled");
+       private  By SaveText = By.cssSelector("button.swal2-confirm.swal2-styled");
         
-        By OkBotton = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
+       private By OkBotton = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
-        By Borradores = By.xpath("/html/body/section/aside[2]/div[2]/ul[2]/li[2]/a");
+       private By Borradores = By.xpath("/html/body/section/aside[2]/div[2]/ul[2]/li[2]/a");
         
-        By CancelarComprobante = By.cssSelector("[data-original-title='Cancelar']");
+       private By CancelarComprobante = By.cssSelector("[data-original-title='Cancelar']");
         
-        By IdentificarStatusCancelacion = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
+       private By IdentificarStatusCancelacion = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
-        By AceptarCancelacion = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
+       private  By AceptarCancelacion = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
-        By SolicitarCancelacion = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
+       private By SolicitarCancelacion = By.xpath("/html/body/div[7]/div/div[3]/button[1]");
         
-        By DuplicadoComercioExtIngreso = By.cssSelector("[data-href='/i/ce']");
+       private  By DuplicadoComercioExtIngreso = By.cssSelector("[data-href='/i/ce']");
         
-        By DuplicadoComercioExtTranslado = By.cssSelector("[data-href='/t/ce']");
+       private  By DuplicadoComercioExtTranslado = By.cssSelector("[data-href='/t/ce']");
         
-        By DuplicarInstituicionesEdu = By.cssSelector("[data-href='/i/iedu']");
+       private  By DuplicarInstituicionesEdu = By.cssSelector("[data-href='/i/iedu']");
         
-        By DuplicarLeyendasFiscales = By.cssSelector("[data-href='/i/lf']");
+       private  By DuplicarLeyendasFiscales = By.cssSelector("[data-href='/i/lf']");
         
-        By DuplicarNotariosPublicos = By.cssSelector("[data-href='/i/np']");
+       private By DuplicarNotariosPublicos = By.cssSelector("[data-href='/i/np']");
         
-        By DuplicarDonatarios = By.cssSelector("[data-href='/i/d']");
+       private By DuplicarDonatarios = By.cssSelector("[data-href='/i/d']");
         
-        By DuplicarPagoEnEspecies = By.cssSelector("[data-href='/i/kp']");
+       private By DuplicarPagoEnEspecies = By.cssSelector("[data-href='/i/kp']");
         
-        By DuplicarPersonasFisicas = By.cssSelector("[data-href='/i/pfic']");
+       private By DuplicarPersonasFisicas = By.cssSelector("[data-href='/i/pfic']");
         
-        By DuplicarServiciosParceales = By.cssSelector("[data-href='/i/cp']");
+       private By DuplicarServiciosParceales = By.cssSelector("[data-href='/i/cp']");
         
-        By DuplicarTuristasYPassageros = By.cssSelector("[data-href='/i/tpe']");
+       private By DuplicarTuristasYPassageros = By.cssSelector("[data-href='/i/tpe']");
         
-        By DuplicarFacturaSimples = By.cssSelector("[data-href='/i']");
+       private By DuplicarFacturaSimples = By.cssSelector("[data-href='/i']");
         
-        By CloneEmail = By.xpath("/html/body/section/section/div/div[2]/form[1]/div[3]/div/div/div[2]/div/div/button/i");
+       private By CloneEmail = By.xpath("/html/body/section/section/div/div[2]/form[1]/div[3]/div/div/div[2]/div/div/button/i");
         
-        By DuplicarINE = By.cssSelector("[data-href='/i/ine']");
+       private By DuplicarINE = By.cssSelector("[data-href='/i/ine']");
         
-        By DuplicarNotaDeCredito = By.cssSelector("[data-href='/e']");
+       private By DuplicarNotaDeCredito = By.cssSelector("[data-href='/e']");
         
-        By DuplicarVehiculoUsado = By.cssSelector("[data-href='/i/v']");
+       private By DuplicarVehiculoUsado = By.cssSelector("[data-href='/i/v']");
         
-        By DuplicadoCartaPorte = By.cssSelector("[data-href='/t']");
+       private By DuplicadoCartaPorte = By.cssSelector("[data-href='/t']");
         
-        By SelectTipoDeCFDI = By.xpath("//div[@class='btn-group bootstrap-select billing_receipt_type_select']");
+       private  By SelectTipoDeCFDI = By.xpath("//div[@class='btn-group bootstrap-select billing_receipt_type_select']");
         
-        By CFDII = By.linkText("Ingreso");
+       private By CFDII = By.linkText("Ingreso");
         
-        By CFDIE = By.linkText("Egreso");
+       private By CFDIE = By.linkText("Egreso");
         
-        By CFDIT = By.linkText("Traslado");
+       private By CFDIT = By.linkText("Traslado");
         
-        By CFDIP = By.linkText("Pago");
+       private By CFDIP = By.linkText("Pago");
         
-        By BusquedaAvanzada = By.id("show-search-receipt-advanced");
+       private By BusquedaAvanzada = By.id("show-search-receipt-advanced");
         
         // BUSQUEDA FORMA DE PAGO
-        By SelectBusquedaFormaDPago = By.cssSelector("[data-id='document_payment_way_id']");
+       private By SelectBusquedaFormaDPago = By.cssSelector("[data-id='document_payment_way_id']");
         
-        By DacionEnPago = By.linkText("Dación en pago");
+       private By DacionEnPago = By.linkText("Dación en pago");
         
-        By ValesDeDespensa = By.linkText("Vales de despensa");
+       private By ValesDeDespensa = By.linkText("Vales de despensa");
         
-        By DineroElectronico = By.linkText("Dinero electrónico");
+       private By DineroElectronico = By.linkText("Dinero electrónico");
         
-        By MonederoElectronico = By.linkText("Monedero electrónico");
+       private By MonederoElectronico = By.linkText("Monedero electrónico");
         
-        By TarjetaDeCredito = By.linkText("Tarjeta de crédito");
+       private By TarjetaDeCredito = By.linkText("Tarjeta de crédito");
         
-        By TransferenciaElectronica = By.linkText("Transferencia electrónica");
+       private By TransferenciaElectronica = By.linkText("Transferencia electrónica");
         
-        By ChequeNominativo = By.linkText("Cheque nominativo");
+       private By ChequeNominativo = By.linkText("Cheque nominativo");
         
-        By Efectivo = By.linkText("Efectivo");
+       private By Efectivo = By.linkText("Efectivo");
         // ESTATUS
-        By SelectStatus = By.cssSelector("[data-id='document_status']");
+       private By SelectStatus = By.cssSelector("[data-id='document_status']");
         
-        By StatusCancelado = By.linkText("Cancelado");
+       private By StatusCancelado = By.linkText("Cancelado");
         
-        By StatusPendientesDeAprov = By.linkText("Pendientes de aprobación");
+       private By StatusPendientesDeAprov = By.linkText("Pendientes de aprobación");
         
-        By StatusEntregadoSat = By.linkText("Entregado SAT");
+       private By StatusEntregadoSat = By.linkText("Entregado SAT");
         
-        By StatusEmitido = By.linkText("Emitido");
+       private By StatusEmitido = By.linkText("Emitido");
         // REGISTROS
-        By Registros = By.cssSelector("[data-id='document_total_page']");
+       private By Registros = By.cssSelector("[data-id='document_total_page']");
         
-        By Registro5000 = By.linkText("5000");
+       private By Registro5000 = By.linkText("5000");
         
-        By Registro2000 = By.linkText("2000");
+       private By Registro2000 = By.linkText("2000");
         
-        By Registro1000 = By.linkText("1000");
+       private By Registro1000 = By.linkText("1000");
         
-        By Registro500 = By.linkText("500");
+       private By Registro500 = By.linkText("500");
         //BUSQUEDA POR METHODO DE PAGO
-        By BusquedaMethodDPago = By.cssSelector("[data-id='document_payment_method_id']");
+       private By BusquedaMethodDPago = By.cssSelector("[data-id='document_payment_method_id']");
         
-        By PagoUnaSolaExib = By.linkText("PUE - Pago en una sola exhibición");
+       private By PagoUnaSolaExib = By.linkText("PUE - Pago en una sola exhibición");
         
-        By PagoEnParcealidades = By.linkText("PPD - Pago en parcialidades o diferido");
+       private By PagoEnParcealidades = By.linkText("PPD - Pago en parcialidades o diferido");
         
-        By CodigoDeConfirm = By.id("document_confirm_code");
+       private By CodigoDeConfirm = By.id("document_confirm_code");
         
-        By FolioFiscal = By.id("document_uuid");
+       private By FolioFiscal = By.id("document_uuid");
         
-        By Ticket = By.id("document_ref_id");
+       private By Ticket = By.id("document_ref_id");
         
-        By Serie = By.id("document_receipt_serie");
+       private By Serie = By.id("document_receipt_serie");
         
-        By Folio = By.id("document_receipt_folio");
-        
-        
+       private By Folio = By.id("document_receipt_folio");
         
         
         
@@ -413,6 +413,10 @@ public class LandingPageBuson {
         
         
         
+        
+        public WebElement SideBar() {
+        	return driver.findElement(SideBar);
+        }
         public WebElement TimbreFiscal() {
         	return driver.findElement(TimbreFiscal);
         }

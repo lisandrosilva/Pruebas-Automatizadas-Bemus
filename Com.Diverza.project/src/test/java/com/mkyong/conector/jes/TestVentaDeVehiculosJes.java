@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class TestVentaDeVehiculosJes extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -101,7 +102,7 @@ public class TestVentaDeVehiculosJes extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

@@ -26,6 +26,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class PagoEnEspeciesDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -35,7 +36,7 @@ public class PagoEnEspeciesDetailTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void pagoEnEspecieDetail1() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -196,11 +197,11 @@ public class PagoEnEspeciesDetailTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	
-	}
+}
  
 
 

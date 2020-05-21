@@ -25,6 +25,7 @@ import pageObjects.busonfiscal.CommonInfo;
 import resources.base;
 
 public class PersonasFisicasIntegranteDeCoordinacionJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -96,7 +97,7 @@ public class PersonasFisicasIntegranteDeCoordinacionJesTest extends base{
 	    }
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
 	

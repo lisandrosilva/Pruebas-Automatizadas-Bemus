@@ -18,6 +18,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class PasswordTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -27,7 +28,7 @@ public class PasswordTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void testPassword() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -40,7 +41,7 @@ public class PasswordTest extends base{
 		}
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	}
  

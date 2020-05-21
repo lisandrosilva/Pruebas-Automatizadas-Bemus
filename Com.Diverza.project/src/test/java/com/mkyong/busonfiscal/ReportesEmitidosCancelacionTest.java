@@ -22,6 +22,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ReportesEmitidosCancelacionTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -31,7 +32,7 @@ public class ReportesEmitidosCancelacionTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void reportesEmitidosCancelacion() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -47,6 +48,8 @@ public class ReportesEmitidosCancelacionTest extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Emitidos().click();
 		ld.EmitidoRFC().sendKeys("CACX7605101P8");
@@ -80,7 +83,7 @@ public class ReportesEmitidosCancelacionTest extends base{
 	
 	@AfterTest
 		public void closeBrowser() {
-			driver.close();
+			driver.quit();
 			
 		}
 		

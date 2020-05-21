@@ -21,6 +21,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ReportesEmitidosDuplicarComplInstituicionesEducativasTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -30,7 +31,7 @@ public class ReportesEmitidosDuplicarComplInstituicionesEducativasTest extends b
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void duplicadoInstituicionesEducativas() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -46,6 +47,8 @@ public class ReportesEmitidosDuplicarComplInstituicionesEducativasTest extends b
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Emitidos().click();
 		ld.EmitidoRFC().sendKeys("CACX7605101P8");
@@ -63,7 +66,9 @@ public class ReportesEmitidosDuplicarComplInstituicionesEducativasTest extends b
 		ld.AceptarStatus().click();
 		Thread.sleep(2000);
 		ld.DuplicarEmitido().click();
+		Thread.sleep(1000);
 		ld.DuplicarInstEducativas().click();
+		Thread.sleep(2000);
 		ld.DuplicacionEmitido().click();
 		Thread.sleep(2000);
 		ld.EmitirDuplicado().click();
@@ -77,7 +82,7 @@ public class ReportesEmitidosDuplicarComplInstituicionesEducativasTest extends b
 	
 	@AfterTest
 		 public void closeBrowser() {
-			 driver.close();
+			 driver.quit();
 			
 		}
 		

@@ -23,6 +23,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class DonativosJesTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -32,7 +33,7 @@ public class DonativosJesTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void donativosJes() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -52,6 +53,8 @@ public class DonativosJesTest extends base{
 		Thread.sleep(1000);
 		g.ButtonJes().click();
 		}
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);

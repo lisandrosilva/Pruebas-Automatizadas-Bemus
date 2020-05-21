@@ -26,6 +26,7 @@ import pageObjects.busonfiscal.CommonLocal;
 import resources.base;
 
 public class ComercioExteriorJesDetailTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -35,7 +36,7 @@ public class ComercioExteriorJesDetailTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void comercioExteriorDetailJes() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -52,8 +53,11 @@ public class ComercioExteriorJesDetailTest extends base{
 		LandingPage g = new LandingPage(driver);
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
+		Thread.sleep(1000);
 		g.ButtonJes().click();
 		}
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -136,13 +140,13 @@ public class ComercioExteriorJesDetailTest extends base{
         ps.MercanciaDescript().sendKeys("AUDI");
         ps.AddDescriptMercancia().click();
         ps.AddMercancia().click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         n.ButtonEmisorComExterior().click();
         n.SelectClaveEstadoEmisor().sendKeys("BCS");
         n.SelectClaveEstadoEmisor().sendKeys(Keys.ENTER);
         n.CodiPEmisor().sendKeys("66457");
         n.CalleEmisor().sendKeys("Aguas Calientes");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         n.ButtonDestinoExterior().click();
         n.AddDestinatario().click();
         Thread.sleep(2000);
@@ -152,6 +156,7 @@ public class ComercioExteriorJesDetailTest extends base{
         n.CalleDestinatario().sendKeys("Monte Mayor");
         n.AgregarDestinatario().click();
         n.AddDestiny().click();
+        Thread.sleep(3000);
         n.ButtonReceptorExtensor().click();
         n.SelectPaisReceptor().sendKeys("MEX");
         n.SelectPaisReceptor().sendKeys(Keys.ENTER);

@@ -20,6 +20,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ReportesEmitidosgratuitoTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -29,7 +30,7 @@ public class ReportesEmitidosgratuitoTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void reportesEmitidosGratuito2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -41,6 +42,8 @@ public class ReportesEmitidosgratuitoTest2 extends base{
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
 		g.ButtonSUL().click();
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Emitidos().click();
 		ld.EmitidoDataInicial().sendKeys("18-10-2019");
@@ -53,7 +56,7 @@ public class ReportesEmitidosgratuitoTest2 extends base{
 		}
 	@AfterTest
 	public void closeBrowser() {
-		driver.close();
+		driver.quit();
 		
 	  }
 	

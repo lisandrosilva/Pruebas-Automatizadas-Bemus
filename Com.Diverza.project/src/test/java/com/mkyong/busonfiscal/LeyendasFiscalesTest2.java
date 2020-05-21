@@ -32,7 +32,7 @@ public class LeyendasFiscalesTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void leyendas2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -48,6 +48,8 @@ public class LeyendasFiscalesTest2 extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -76,11 +78,12 @@ public class LeyendasFiscalesTest2 extends base{
         ps.DescripticionConsept().sendKeys("Factura");
         ps.ValorUnitarioConsept().sendKeys("75");
         ps.AddConsept().click();
+        }
         Thread.sleep(2000);
         ps.AgregarLeyenda().click();
         ps.TextLeyenda().sendKeys("Text");
+        Thread.sleep(1000);
         ps.AddLeyenda().click();
-        }
         ps.EmitirFactura().click();
         Thread.sleep(5000);
         ld.SignOut().click();

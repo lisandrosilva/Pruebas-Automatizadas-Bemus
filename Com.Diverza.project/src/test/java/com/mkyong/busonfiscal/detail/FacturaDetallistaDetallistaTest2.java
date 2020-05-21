@@ -36,7 +36,7 @@ public class FacturaDetallistaDetallistaTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaDetallistaDetail2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		       driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -320,7 +320,7 @@ public class FacturaDetallistaDetallistaTest2 extends base{
 	    }
 	@AfterTest
 	    public void closeBrowser() {
-		         driver.close();
+		         driver.quit();
 		
 	}
 	

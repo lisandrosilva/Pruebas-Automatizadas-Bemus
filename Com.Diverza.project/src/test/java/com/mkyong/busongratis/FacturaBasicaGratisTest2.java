@@ -22,6 +22,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class FacturaBasicaGratisTest2 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -31,7 +32,7 @@ public class FacturaBasicaGratisTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void facturaBasicaGratis2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -43,6 +44,8 @@ public class FacturaBasicaGratisTest2 extends base{
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
 		g.ButtonSUL().click();
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ingCrearCopr().click();
 		Thread.sleep(2000);
@@ -70,6 +73,7 @@ public class FacturaBasicaGratisTest2 extends base{
 	    Thread.sleep(1000);
 	    s.MethodPago1Exhibicion().click();
 	    Thread.sleep(2000);
+	    for(int i=0; i<=3; i++) {
 		s.AgregarConsept().click();
 		s.ClaveDelProducto().sendKeys("10215612");
 		s.CantidadConsept().sendKeys("4");
@@ -77,21 +81,14 @@ public class FacturaBasicaGratisTest2 extends base{
 		s.DescripticionConsept().sendKeys("Factura Electronica");
 		s.ValorUnitarioConsept().sendKeys("60");
 		g.AddConseptGratis().click();
-		Thread.sleep(2000);
-		s.AgregarConsept().click();
-		s.ClaveDelProducto().sendKeys("10215612");
-		s.CantidadConsept().sendKeys("4");
-		s.ClaveDeUnidad().sendKeys("H87");
-		s.DescripticionConsept().sendKeys("Factura Electronica");
-		s.ValorUnitarioConsept().sendKeys("60");
-		g.AddConseptGratis().click();
+	    }
 		Thread.sleep(5000);
 		s.EmitirFactura().click();
 		
 		}
     @AfterTest
 	    public void closeBrowser() {
-		  driver.close();
+		  driver.quit();
 	
 	  }
 	

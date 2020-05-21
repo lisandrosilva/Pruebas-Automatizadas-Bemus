@@ -29,6 +29,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class HomePageBusonTest extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -38,7 +39,7 @@ public class HomePageBusonTest extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
+	public void serviciosBuzon() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -56,6 +57,8 @@ public class HomePageBusonTest extends base{
 		}else {
 			System.out.println("Contninue the operation");
 		}
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.ConfigBotton().click();
 		ld.FolioSeries().click();
@@ -68,16 +71,21 @@ public class HomePageBusonTest extends base{
 		js.executeScript("document.getElementById('serial_end').value='9999999';");
 		Thread.sleep(1000);
 		ld.AgregarFolio().click();
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Sucursales().click();
 		Thread.sleep(1000);
 		ld.AddSucursal().click();
+		Thread.sleep(1000);
 		ld.SucursalBranch().sendKeys("San Nicolas");
 		ld.SucursalAlias().sendKeys("Prueba9");
 		ld.SucursalZip().sendKeys("66457");
 		Thread.sleep(1000);
 		ld.ActivarSucursal().click();
 		ld.GuardarSucursal().click();
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Certificados().click();
 		Thread.sleep(2000);
@@ -129,7 +137,7 @@ public class HomePageBusonTest extends base{
 		}
 	@AfterTest
 	     public void closeBrowser() {
-		       driver.close();
+		       driver.quit();
 		
 	}
  

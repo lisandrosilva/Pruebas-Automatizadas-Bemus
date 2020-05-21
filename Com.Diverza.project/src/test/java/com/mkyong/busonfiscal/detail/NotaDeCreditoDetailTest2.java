@@ -35,7 +35,7 @@ public class NotaDeCreditoDetailTest2 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void notaDeCreditoDetail2() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -197,7 +197,7 @@ public class NotaDeCreditoDetailTest2 extends base{
 		}
 	@AfterTest
 	   public void closeBrowser() {
-		driver.close();
+		driver.quit();
 	
 	}
 }

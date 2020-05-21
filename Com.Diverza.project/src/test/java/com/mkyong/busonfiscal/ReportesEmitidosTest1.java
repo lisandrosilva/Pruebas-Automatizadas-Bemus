@@ -24,6 +24,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class ReportesEmitidosTest1 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -33,7 +34,7 @@ public class ReportesEmitidosTest1 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException, AWTException {
+	public void reportesEmitidos1() throws IOException, InterruptedException, AWTException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -49,6 +50,8 @@ public class ReportesEmitidosTest1 extends base{
 		g.ButtonFunk().click();
 		g.ButtonJes().click();
 		}else{
+		Thread.sleep(3000);
+		ld.SideBar().click();
 		Thread.sleep(2000);
 		ld.Emitidos().click();
 		ld.EmitidoRFC().sendKeys("CACX7605101P8");
@@ -83,7 +86,7 @@ public class ReportesEmitidosTest1 extends base{
 	
 	@AfterTest
     public void closeBrowser() {
-	    driver.close();
+	    driver.quit();
 	
    }
 	

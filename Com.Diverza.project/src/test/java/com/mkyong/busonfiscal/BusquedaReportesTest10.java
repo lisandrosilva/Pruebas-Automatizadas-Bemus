@@ -22,6 +22,7 @@ import pageObjects.SearchPage;
 import resources.base;
 
 public class BusquedaReportesTest10 extends base{
+	public WebDriver driver;
 	 @BeforeTest
 	 public void initiaLiseBrowser() throws IOException {
 		 driver = initializeDriver();
@@ -31,7 +32,7 @@ public class BusquedaReportesTest10 extends base{
 		 
 	 }
 	@Test 
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void busquedaDeReportes10() throws IOException, InterruptedException {
 		 
 		       LandingPageBuson ld = new LandingPageBuson(driver);
 		
@@ -45,6 +46,7 @@ public class BusquedaReportesTest10 extends base{
 		LandingPage g = new LandingPage(driver);
 		Thread.sleep(2000);
 		g.ButtonFunk().click();
+		Thread.sleep(1000);
 		g.ButtonJes().click();
 		}else {
 			System.out.println("Continue with operation");
@@ -63,7 +65,7 @@ public class BusquedaReportesTest10 extends base{
 	}
 	@AfterTest
 	     public void closeBrowser() {
-		   driver.close();
+		   driver.quit();
 		
 	
  
